@@ -19,28 +19,30 @@ creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
 
-# Create a reference to the Google post.
-doc_ref = db.collection("Tuition").document("Tuition")
+navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
 
-# Then get the data at that reference.
-doc = doc_ref.get()
+if navi == "Home":
+    st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
+             " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
+             "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
+             "don’t have the privilege of having family members or someone they know that had such experiences to help "
+             "guide them. These students often fall into the groups of first generation college students and "
+             "underrepresented minorities. Additionally, American college graduates have an average of $30000 loan debt. "
+             "Some graduates may end up being in more debt due to the college they pick and/or the major they choose. "
+             "We want to build a website that provides prospective college students an understanding of the finance "
+             "factor when it comes to getting a college degree, especially for helping first generation college students "
+             "and underrepresented minorities who don’t have much resources around them.")
+if navi == "Data Display":
+    # Create a reference to the Google post.
+    doc_ref = db.collection("Tuition").document("Tuition")
 
-# Let's see what we got!
-st.write("The id is: ", doc.id)
-st.write("The contents are: ", doc.to_dict())
+    # Then get the data at that reference.
+    doc = doc_ref.get()
 
-st.button('Hit me')
-st.download_button('On the dl', data)
-st.checkbox('Check me out')
-st.radio('Radio', [1,2,3])
-st.selectbox('Select', [1,2,3])
-st.multiselect('Multiselect', [1,2,3])
-st.slider('Slide me', min_value=0, max_value=10)
-st.select_slider('Slide to select', options=[1,'2'])
-st.text_input('Enter some text')
-st.number_input('Enter a number')
-st.text_area('Area for textual entry')
-st.date_input('Date input')
-st.time_input('Time entry')
-st.file_uploader('File uploader')
-st.color_picker('Pick a color')
+    # Let's see what we got!
+    st.write("The id is: ", doc.id)
+    st.write("The contents are: ", doc.to_dict())
+
+
+
+
