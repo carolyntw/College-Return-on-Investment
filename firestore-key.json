@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "college-return-on-investment",
+  "private_key_id": "fee78b8d40a86023aff49bb11a94b0ace84d12fc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDC6bfhwsYw9z1R\nQjkCimp5r9NTbmabQQFERO5UYYzMI6thoaBIh8mPhYDISnGtlZc+ihJFXGeRMdNd\nF3RDbpa3ken1/sdBbqcZJQfxCTJwHtDAviB379Ar72a2nK0+krw/4zyVOnLzFOID\ndNZONR4JPZR56UKJ1SDp7vCMHHMDVwfOaHBgKNq0Iryiw3hZiX23PayV4rH4+31D\nntiJvNozLiu/d28kdl9kjhIwgRcARK7MwqpXmQ+VJXj0k/yWD13r55qqxItmhm3g\n5iNPdbvm3v/Uzz/qv/ZJSX6WAyFtStFct42hTV80JbwBo1HMmGzhrsW/FWM1e60b\nwsb0aiNfAgMBAAECggEANQr7orGp0+uEwVdfQmS+wyzpOrxBqiCPoq+LmGUPtwJC\nAojEoNhrLuaq/FbeBto91aQngr655JaFqcDXP/6Zf41y+SIDwbfGO56LQbo6Aq8w\nKjPTjDA0G7DD6BBNSUkPd+d0Njw4yhQ1ybEDHTdxXBxpCqBDHlVk5qTCy652UkLk\nI88ZcYuWtRHPCiLodjnyQ5hdnytKvKBhqTdcj5BSqMnW768wYOyPeLGKo3CSrN9i\nzxdgpwRGVlFb0cjWDZnvcZy+YVxZ94wyPKazdoc4f6dJZMp32DH2a2RpLvh3Ueca\nLUNzTI9ZvJDP/OJoXhSo6LaubPQ+d9FFmSiwIzc+cQKBgQDuWwoEtDCM8xkDQ4Q2\nVF+XIlsHApWybQrYdJ4JL+WSPz/zU1iNmlqf2NZ+bdXhOhuzm9/RevOMez1nRFAQ\nzIJ9XRoXR+jffFCRiVaVzBxITh545DBxwak6HTN/uK5N7gy0pV6AYstnJMTVuK7u\nSthHN7blfzpDG4eV34507BmJ+QKBgQDRV2smFvLGHZV4m8cfUzpmibWD7CM+j5zm\nS+GB7Xivs1TPmnedg+Th4Fx7tCdwxrC3Hk9D2XYGUKuuQfnFiuG8dupV9HPYhycJ\nTOHmHaSX4oieTooKZNUDuIaiyzjNqgLJanW8pb7IIkn39XefMoC7cMKJBtGWoljV\niBpoVvQuFwKBgAL09CncxmFpPp0wwDogT9NDJNfwa0T8X08SG0fH5VQsHrH5Dbcr\n/AXRnc+Rsz6JBwDyZRNnMBBFExzt1wRuVQwTFJjHVpc3JpS3nHBdSNiIx43+Xq96\nlIvZAuOJuffThSrUhliXYSiVZy+zi8/+87Hmeglcy687bzInxM+kgiiZAoGBAIJ6\nij5jb04sgk16StIrfesLSie/tvf3a0PfZ98jtGVO0T3UeVmkK7Tdsscnsq2IKfz4\n107i671j6p3iYVvPBIQDWmvYwZvkIWCamvJi54QDnkONkFyKHHsFOGWfZPhLTxFb\nWacLZ642MQRr6vM+9x3dWmMt7NSGu/fbrRn7mJZhAoGAa0fI8T3mNXJZKjkkofVu\nYEyWl0+OFQee4ZONHDcL3m+1GrxQ9wG5PotkZrQFYUl/l23POtpRuvN3CrdTzOjt\nSaYkp7l+Nz9sCStjjuj5Vmnhq3KQR326t7pn4r/eTME0T3Jm8rMruaK4Uiyjn8QN\nwtqSmXmNSJWyD555AydHGkQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-mdmib@college-return-on-investment.iam.gserviceaccount.com",
+  "client_id": "103295636960766143990",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-mdmib%40college-return-on-investment.iam.gserviceaccount.com"
+}
