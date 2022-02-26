@@ -5,8 +5,9 @@
 # @Software: PyCharm
 
 import streamlit as st
-from google.cloud import firestore, service_account
+from google.cloud import firestore
 import json
+from google.oauth2 import service_account
 
 
 
