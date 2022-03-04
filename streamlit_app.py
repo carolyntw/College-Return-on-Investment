@@ -22,6 +22,9 @@ db = firestore.Client(credentials=creds, project="college-return-on-investment")
 navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
 
 if navi == "Home":
+    # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
+    # st.title("🎓 Diploma PDF Generator")
+    st.header('🎓 College Returen on Investment')
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
              "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
@@ -32,9 +35,24 @@ if navi == "Home":
              "We want to build a website that provides prospective college students an understanding of the finance "
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
+
 if navi == "Data Display":
     # Create a reference to the Google post.
     doc_ref = db.collection("Tuition").document("Tuition")
+
+    form = st.form(key="school_info")
+    with form:
+        cols = st.columns(3)
+        state = cols[0].selectbox(
+            'State',
+            ('CA', 'NY', 'OH'))
+        university = cols[1].selectbox(
+            'University',
+            ('USC', 'SJSU', 'UCLA','UCI'))
+        major = cols[2].selectbox(
+            'Major',
+            ('Computer Science', 'Applied Data Science', 'Art'))
+        submitted = st.form_submit_button(label="Submit")
 
     # Then get the data at that reference.
     doc = doc_ref.get()
@@ -43,6 +61,22 @@ if navi == "Data Display":
     st.write("The id is: ", doc.id)
     st.write("The contents are: ", doc.to_dict())
 
-
+if navi == "Contact Us":
+    st.header('📝 Feedback')
+    st.write("Our Email: jennyyan54@gmail.com")
+    st.subheader("Send Us Your Feedback")
+    form = st.form(key="feedback")
+    with form:
+        fname = st.text_input("First Name")
+        lname = st.text_input("Last Name")
+        cols = st.columns(2)
+        area = cols[0].text_input("Area Code")
+        tel = cols[1].text_input("Tel.Number")
+        email = st.text_input("Email")
+        cont = st.columns(2)
+        contact = cont[0].checkbox("May we contact you?")
+        contact = cont[1].selectbox("Contact By", ('Tel.', 'Email'))
+        feedback = st.text_area("Feedback")
+        submitted = st.form_submit_button(label="Submit")
 
 
