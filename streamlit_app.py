@@ -8,7 +8,7 @@ import streamlit as st
 from google.cloud import firestore
 import json
 from google.oauth2 import service_account
-
+import sys
 
 
 # Authenticate to Firestore with the JSON account key.
@@ -20,6 +20,7 @@ db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
 
 navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
+
 
 if navi == "Home":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
