@@ -8,7 +8,8 @@ import streamlit as st
 from google.cloud import firestore
 import json
 from google.oauth2 import service_account
-import os
+
+
 
 # Authenticate to Firestore with the JSON account key.
 # db = firestore.Client.from_service_account_json("firestore-key.json")
@@ -17,8 +18,8 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
 
+navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
 
 if navi == "Home":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
@@ -77,5 +78,3 @@ if navi == "Contact Us":
         contact = cont[1].selectbox("Contact By", ('Tel.', 'Email'))
         feedback = st.text_area("Feedback")
         submitted = st.form_submit_button(label="Submit")
-
-
