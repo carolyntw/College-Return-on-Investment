@@ -1,0 +1,502 @@
+[
+  {
+    "Undergraduate Major": "Accounting",
+    "Starting Median Salary": "$46,000.00",
+    "Mid-Career Median Salary": "$77,100.00",
+    "Percent change from Starting to Mid-Career Salary": "67.6",
+    "Mid-Career 10th Percentile Salary": "$42,200.00",
+    "Mid-Career 25th Percentile Salary": "$56,100.00",
+    "Mid-Career 75th Percentile Salary": "$108,000.00",
+    "Mid-Career 90th Percentile Salary": "$152,000.00"
+  },
+  {
+    "Undergraduate Major": "Aerospace Engineering",
+    "Starting Median Salary": "$57,700.00",
+    "Mid-Career Median Salary": "$101,000.00",
+    "Percent change from Starting to Mid-Career Salary": "75",
+    "Mid-Career 10th Percentile Salary": "$64,300.00",
+    "Mid-Career 25th Percentile Salary": "$82,100.00",
+    "Mid-Career 75th Percentile Salary": "$127,000.00",
+    "Mid-Career 90th Percentile Salary": "$161,000.00"
+  },
+  {
+    "Undergraduate Major": "Agriculture",
+    "Starting Median Salary": "$42,600.00",
+    "Mid-Career Median Salary": "$71,900.00",
+    "Percent change from Starting to Mid-Career Salary": "68.8",
+    "Mid-Career 10th Percentile Salary": "$36,300.00",
+    "Mid-Career 25th Percentile Salary": "$52,100.00",
+    "Mid-Career 75th Percentile Salary": "$96,300.00",
+    "Mid-Career 90th Percentile Salary": "$150,000.00"
+  },
+  {
+    "Undergraduate Major": "Anthropology",
+    "Starting Median Salary": "$36,800.00",
+    "Mid-Career Median Salary": "$61,500.00",
+    "Percent change from Starting to Mid-Career Salary": "67.1",
+    "Mid-Career 10th Percentile Salary": "$33,800.00",
+    "Mid-Career 25th Percentile Salary": "$45,500.00",
+    "Mid-Career 75th Percentile Salary": "$89,300.00",
+    "Mid-Career 90th Percentile Salary": "$138,000.00"
+  },
+  {
+    "Undergraduate Major": "Architecture",
+    "Starting Median Salary": "$41,600.00",
+    "Mid-Career Median Salary": "$76,800.00",
+    "Percent change from Starting to Mid-Career Salary": "84.6",
+    "Mid-Career 10th Percentile Salary": "$50,600.00",
+    "Mid-Career 25th Percentile Salary": "$62,200.00",
+    "Mid-Career 75th Percentile Salary": "$97,000.00",
+    "Mid-Career 90th Percentile Salary": "$136,000.00"
+  },
+  {
+    "Undergraduate Major": "Art History",
+    "Starting Median Salary": "$35,800.00",
+    "Mid-Career Median Salary": "$64,900.00",
+    "Percent change from Starting to Mid-Career Salary": "81.3",
+    "Mid-Career 10th Percentile Salary": "$28,800.00",
+    "Mid-Career 25th Percentile Salary": "$42,200.00",
+    "Mid-Career 75th Percentile Salary": "$87,400.00",
+    "Mid-Career 90th Percentile Salary": "$125,000.00"
+  },
+  {
+    "Undergraduate Major": "Biology",
+    "Starting Median Salary": "$38,800.00",
+    "Mid-Career Median Salary": "$64,800.00",
+    "Percent change from Starting to Mid-Career Salary": "67",
+    "Mid-Career 10th Percentile Salary": "$36,900.00",
+    "Mid-Career 25th Percentile Salary": "$47,400.00",
+    "Mid-Career 75th Percentile Salary": "$94,500.00",
+    "Mid-Career 90th Percentile Salary": "$135,000.00"
+  },
+  {
+    "Undergraduate Major": "Business Management",
+    "Starting Median Salary": "$43,000.00",
+    "Mid-Career Median Salary": "$72,100.00",
+    "Percent change from Starting to Mid-Career Salary": "67.7",
+    "Mid-Career 10th Percentile Salary": "$38,800.00",
+    "Mid-Career 25th Percentile Salary": "$51,500.00",
+    "Mid-Career 75th Percentile Salary": "$102,000.00",
+    "Mid-Career 90th Percentile Salary": "$147,000.00"
+  },
+  {
+    "Undergraduate Major": "Chemical Engineering",
+    "Starting Median Salary": "$63,200.00",
+    "Mid-Career Median Salary": "$107,000.00",
+    "Percent change from Starting to Mid-Career Salary": "69.3",
+    "Mid-Career 10th Percentile Salary": "$71,900.00",
+    "Mid-Career 25th Percentile Salary": "$87,300.00",
+    "Mid-Career 75th Percentile Salary": "$143,000.00",
+    "Mid-Career 90th Percentile Salary": "$194,000.00"
+  },
+  {
+    "Undergraduate Major": "Chemistry",
+    "Starting Median Salary": "$42,600.00",
+    "Mid-Career Median Salary": "$79,900.00",
+    "Percent change from Starting to Mid-Career Salary": "87.6",
+    "Mid-Career 10th Percentile Salary": "$45,300.00",
+    "Mid-Career 25th Percentile Salary": "$60,700.00",
+    "Mid-Career 75th Percentile Salary": "$108,000.00",
+    "Mid-Career 90th Percentile Salary": "$148,000.00"
+  },
+  {
+    "Undergraduate Major": "Civil Engineering",
+    "Starting Median Salary": "$53,900.00",
+    "Mid-Career Median Salary": "$90,500.00",
+    "Percent change from Starting to Mid-Career Salary": "67.9",
+    "Mid-Career 10th Percentile Salary": "$63,400.00",
+    "Mid-Career 25th Percentile Salary": "$75,100.00",
+    "Mid-Career 75th Percentile Salary": "$115,000.00",
+    "Mid-Career 90th Percentile Salary": "$148,000.00"
+  },
+  {
+    "Undergraduate Major": "Communications",
+    "Starting Median Salary": "$38,100.00",
+    "Mid-Career Median Salary": "$70,000.00",
+    "Percent change from Starting to Mid-Career Salary": "83.7",
+    "Mid-Career 10th Percentile Salary": "$37,500.00",
+    "Mid-Career 25th Percentile Salary": "$49,700.00",
+    "Mid-Career 75th Percentile Salary": "$98,800.00",
+    "Mid-Career 90th Percentile Salary": "$143,000.00"
+  },
+  {
+    "Undergraduate Major": "Computer Engineering",
+    "Starting Median Salary": "$61,400.00",
+    "Mid-Career Median Salary": "$105,000.00",
+    "Percent change from Starting to Mid-Career Salary": "71",
+    "Mid-Career 10th Percentile Salary": "$66,100.00",
+    "Mid-Career 25th Percentile Salary": "$84,100.00",
+    "Mid-Career 75th Percentile Salary": "$135,000.00",
+    "Mid-Career 90th Percentile Salary": "$162,000.00"
+  },
+  {
+    "Undergraduate Major": "Computer Science",
+    "Starting Median Salary": "$55,900.00",
+    "Mid-Career Median Salary": "$95,500.00",
+    "Percent change from Starting to Mid-Career Salary": "70.8",
+    "Mid-Career 10th Percentile Salary": "$56,000.00",
+    "Mid-Career 25th Percentile Salary": "$74,900.00",
+    "Mid-Career 75th Percentile Salary": "$122,000.00",
+    "Mid-Career 90th Percentile Salary": "$154,000.00"
+  },
+  {
+    "Undergraduate Major": "Construction",
+    "Starting Median Salary": "$53,700.00",
+    "Mid-Career Median Salary": "$88,900.00",
+    "Percent change from Starting to Mid-Career Salary": "65.5",
+    "Mid-Career 10th Percentile Salary": "$56,300.00",
+    "Mid-Career 25th Percentile Salary": "$68,100.00",
+    "Mid-Career 75th Percentile Salary": "$118,000.00",
+    "Mid-Career 90th Percentile Salary": "$171,000.00"
+  },
+  {
+    "Undergraduate Major": "Criminal Justice",
+    "Starting Median Salary": "$35,000.00",
+    "Mid-Career Median Salary": "$56,300.00",
+    "Percent change from Starting to Mid-Career Salary": "60.9",
+    "Mid-Career 10th Percentile Salary": "$32,200.00",
+    "Mid-Career 25th Percentile Salary": "$41,600.00",
+    "Mid-Career 75th Percentile Salary": "$80,700.00",
+    "Mid-Career 90th Percentile Salary": "$107,000.00"
+  },
+  {
+    "Undergraduate Major": "Drama",
+    "Starting Median Salary": "$35,900.00",
+    "Mid-Career Median Salary": "$56,900.00",
+    "Percent change from Starting to Mid-Career Salary": "58.5",
+    "Mid-Career 10th Percentile Salary": "$36,700.00",
+    "Mid-Career 25th Percentile Salary": "$41,300.00",
+    "Mid-Career 75th Percentile Salary": "$79,100.00",
+    "Mid-Career 90th Percentile Salary": "$153,000.00"
+  },
+  {
+    "Undergraduate Major": "Economics",
+    "Starting Median Salary": "$50,100.00",
+    "Mid-Career Median Salary": "$98,600.00",
+    "Percent change from Starting to Mid-Career Salary": "96.8",
+    "Mid-Career 10th Percentile Salary": "$50,600.00",
+    "Mid-Career 25th Percentile Salary": "$70,600.00",
+    "Mid-Career 75th Percentile Salary": "$145,000.00",
+    "Mid-Career 90th Percentile Salary": "$210,000.00"
+  },
+  {
+    "Undergraduate Major": "Education",
+    "Starting Median Salary": "$34,900.00",
+    "Mid-Career Median Salary": "$52,000.00",
+    "Percent change from Starting to Mid-Career Salary": "49",
+    "Mid-Career 10th Percentile Salary": "$29,300.00",
+    "Mid-Career 25th Percentile Salary": "$37,900.00",
+    "Mid-Career 75th Percentile Salary": "$73,400.00",
+    "Mid-Career 90th Percentile Salary": "$102,000.00"
+  },
+  {
+    "Undergraduate Major": "Electrical Engineering",
+    "Starting Median Salary": "$60,900.00",
+    "Mid-Career Median Salary": "$103,000.00",
+    "Percent change from Starting to Mid-Career Salary": "69.1",
+    "Mid-Career 10th Percentile Salary": "$69,300.00",
+    "Mid-Career 25th Percentile Salary": "$83,800.00",
+    "Mid-Career 75th Percentile Salary": "$130,000.00",
+    "Mid-Career 90th Percentile Salary": "$168,000.00"
+  },
+  {
+    "Undergraduate Major": "English",
+    "Starting Median Salary": "$38,000.00",
+    "Mid-Career Median Salary": "$64,700.00",
+    "Percent change from Starting to Mid-Career Salary": "70.3",
+    "Mid-Career 10th Percentile Salary": "$33,400.00",
+    "Mid-Career 25th Percentile Salary": "$44,800.00",
+    "Mid-Career 75th Percentile Salary": "$93,200.00",
+    "Mid-Career 90th Percentile Salary": "$133,000.00"
+  },
+  {
+    "Undergraduate Major": "Film",
+    "Starting Median Salary": "$37,900.00",
+    "Mid-Career Median Salary": "$68,500.00",
+    "Percent change from Starting to Mid-Career Salary": "80.7",
+    "Mid-Career 10th Percentile Salary": "$33,900.00",
+    "Mid-Career 25th Percentile Salary": "$45,500.00",
+    "Mid-Career 75th Percentile Salary": "$100,000.00",
+    "Mid-Career 90th Percentile Salary": "$136,000.00"
+  },
+  {
+    "Undergraduate Major": "Finance",
+    "Starting Median Salary": "$47,900.00",
+    "Mid-Career Median Salary": "$88,300.00",
+    "Percent change from Starting to Mid-Career Salary": "84.3",
+    "Mid-Career 10th Percentile Salary": "$47,200.00",
+    "Mid-Career 25th Percentile Salary": "$62,100.00",
+    "Mid-Career 75th Percentile Salary": "$128,000.00",
+    "Mid-Career 90th Percentile Salary": "$195,000.00"
+  },
+  {
+    "Undergraduate Major": "Forestry",
+    "Starting Median Salary": "$39,100.00",
+    "Mid-Career Median Salary": "$62,600.00",
+    "Percent change from Starting to Mid-Career Salary": "60.1",
+    "Mid-Career 10th Percentile Salary": "$41,000.00",
+    "Mid-Career 25th Percentile Salary": "$49,300.00",
+    "Mid-Career 75th Percentile Salary": "$78,200.00",
+    "Mid-Career 90th Percentile Salary": "$111,000.00"
+  },
+  {
+    "Undergraduate Major": "Geography",
+    "Starting Median Salary": "$41,200.00",
+    "Mid-Career Median Salary": "$65,500.00",
+    "Percent change from Starting to Mid-Career Salary": "59",
+    "Mid-Career 10th Percentile Salary": "$40,000.00",
+    "Mid-Career 25th Percentile Salary": "$50,000.00",
+    "Mid-Career 75th Percentile Salary": "$90,800.00",
+    "Mid-Career 90th Percentile Salary": "$132,000.00"
+  },
+  {
+    "Undergraduate Major": "Geology",
+    "Starting Median Salary": "$43,500.00",
+    "Mid-Career Median Salary": "$79,500.00",
+    "Percent change from Starting to Mid-Career Salary": "82.8",
+    "Mid-Career 10th Percentile Salary": "$45,000.00",
+    "Mid-Career 25th Percentile Salary": "$59,600.00",
+    "Mid-Career 75th Percentile Salary": "$101,000.00",
+    "Mid-Career 90th Percentile Salary": "$156,000.00"
+  },
+  {
+    "Undergraduate Major": "Graphic Design",
+    "Starting Median Salary": "$35,700.00",
+    "Mid-Career Median Salary": "$59,800.00",
+    "Percent change from Starting to Mid-Career Salary": "67.5",
+    "Mid-Career 10th Percentile Salary": "$36,000.00",
+    "Mid-Career 25th Percentile Salary": "$45,500.00",
+    "Mid-Career 75th Percentile Salary": "$80,800.00",
+    "Mid-Career 90th Percentile Salary": "$112,000.00"
+  },
+  {
+    "Undergraduate Major": "Health Care Administration",
+    "Starting Median Salary": "$38,800.00",
+    "Mid-Career Median Salary": "$60,600.00",
+    "Percent change from Starting to Mid-Career Salary": "56.2",
+    "Mid-Career 10th Percentile Salary": "$34,600.00",
+    "Mid-Career 25th Percentile Salary": "$45,600.00",
+    "Mid-Career 75th Percentile Salary": "$78,800.00",
+    "Mid-Career 90th Percentile Salary": "$101,000.00"
+  },
+  {
+    "Undergraduate Major": "History",
+    "Starting Median Salary": "$39,200.00",
+    "Mid-Career Median Salary": "$71,000.00",
+    "Percent change from Starting to Mid-Career Salary": "81.1",
+    "Mid-Career 10th Percentile Salary": "$37,000.00",
+    "Mid-Career 25th Percentile Salary": "$49,200.00",
+    "Mid-Career 75th Percentile Salary": "$103,000.00",
+    "Mid-Career 90th Percentile Salary": "$149,000.00"
+  },
+  {
+    "Undergraduate Major": "Hospitality & Tourism",
+    "Starting Median Salary": "$37,800.00",
+    "Mid-Career Median Salary": "$57,500.00",
+    "Percent change from Starting to Mid-Career Salary": "52.1",
+    "Mid-Career 10th Percentile Salary": "$35,500.00",
+    "Mid-Career 25th Percentile Salary": "$43,600.00",
+    "Mid-Career 75th Percentile Salary": "$81,900.00",
+    "Mid-Career 90th Percentile Salary": "$124,000.00"
+  },
+  {
+    "Undergraduate Major": "Industrial Engineering",
+    "Starting Median Salary": "$57,700.00",
+    "Mid-Career Median Salary": "$94,700.00",
+    "Percent change from Starting to Mid-Career Salary": "64.1",
+    "Mid-Career 10th Percentile Salary": "$57,100.00",
+    "Mid-Career 25th Percentile Salary": "$72,300.00",
+    "Mid-Career 75th Percentile Salary": "$132,000.00",
+    "Mid-Career 90th Percentile Salary": "$173,000.00"
+  },
+  {
+    "Undergraduate Major": "Information Technology (IT)",
+    "Starting Median Salary": "$49,100.00",
+    "Mid-Career Median Salary": "$74,800.00",
+    "Percent change from Starting to Mid-Career Salary": "52.3",
+    "Mid-Career 10th Percentile Salary": "$44,500.00",
+    "Mid-Career 25th Percentile Salary": "$56,700.00",
+    "Mid-Career 75th Percentile Salary": "$96,700.00",
+    "Mid-Career 90th Percentile Salary": "$129,000.00"
+  },
+  {
+    "Undergraduate Major": "Interior Design",
+    "Starting Median Salary": "$36,100.00",
+    "Mid-Career Median Salary": "$53,200.00",
+    "Percent change from Starting to Mid-Career Salary": "47.4",
+    "Mid-Career 10th Percentile Salary": "$35,700.00",
+    "Mid-Career 25th Percentile Salary": "$42,600.00",
+    "Mid-Career 75th Percentile Salary": "$72,500.00",
+    "Mid-Career 90th Percentile Salary": "$107,000.00"
+  },
+  {
+    "Undergraduate Major": "International Relations",
+    "Starting Median Salary": "$40,900.00",
+    "Mid-Career Median Salary": "$80,900.00",
+    "Percent change from Starting to Mid-Career Salary": "97.8",
+    "Mid-Career 10th Percentile Salary": "$38,200.00",
+    "Mid-Career 25th Percentile Salary": "$56,000.00",
+    "Mid-Career 75th Percentile Salary": "$111,000.00",
+    "Mid-Career 90th Percentile Salary": "$157,000.00"
+  },
+  {
+    "Undergraduate Major": "Journalism",
+    "Starting Median Salary": "$35,600.00",
+    "Mid-Career Median Salary": "$66,700.00",
+    "Percent change from Starting to Mid-Career Salary": "87.4",
+    "Mid-Career 10th Percentile Salary": "$38,400.00",
+    "Mid-Career 25th Percentile Salary": "$48,300.00",
+    "Mid-Career 75th Percentile Salary": "$97,700.00",
+    "Mid-Career 90th Percentile Salary": "$145,000.00"
+  },
+  {
+    "Undergraduate Major": "Management Information Systems (MIS)",
+    "Starting Median Salary": "$49,200.00",
+    "Mid-Career Median Salary": "$82,300.00",
+    "Percent change from Starting to Mid-Career Salary": "67.3",
+    "Mid-Career 10th Percentile Salary": "$45,300.00",
+    "Mid-Career 25th Percentile Salary": "$60,500.00",
+    "Mid-Career 75th Percentile Salary": "$108,000.00",
+    "Mid-Career 90th Percentile Salary": "$146,000.00"
+  },
+  {
+    "Undergraduate Major": "Marketing",
+    "Starting Median Salary": "$40,800.00",
+    "Mid-Career Median Salary": "$79,600.00",
+    "Percent change from Starting to Mid-Career Salary": "95.1",
+    "Mid-Career 10th Percentile Salary": "$42,100.00",
+    "Mid-Career 25th Percentile Salary": "$55,600.00",
+    "Mid-Career 75th Percentile Salary": "$119,000.00",
+    "Mid-Career 90th Percentile Salary": "$175,000.00"
+  },
+  {
+    "Undergraduate Major": "Math",
+    "Starting Median Salary": "$45,400.00",
+    "Mid-Career Median Salary": "$92,400.00",
+    "Percent change from Starting to Mid-Career Salary": "103.5",
+    "Mid-Career 10th Percentile Salary": "$45,200.00",
+    "Mid-Career 25th Percentile Salary": "$64,200.00",
+    "Mid-Career 75th Percentile Salary": "$128,000.00",
+    "Mid-Career 90th Percentile Salary": "$183,000.00"
+  },
+  {
+    "Undergraduate Major": "Mechanical Engineering",
+    "Starting Median Salary": "$57,900.00",
+    "Mid-Career Median Salary": "$93,600.00",
+    "Percent change from Starting to Mid-Career Salary": "61.7",
+    "Mid-Career 10th Percentile Salary": "$63,700.00",
+    "Mid-Career 25th Percentile Salary": "$76,200.00",
+    "Mid-Career 75th Percentile Salary": "$120,000.00",
+    "Mid-Career 90th Percentile Salary": "$163,000.00"
+  },
+  {
+    "Undergraduate Major": "Music",
+    "Starting Median Salary": "$35,900.00",
+    "Mid-Career Median Salary": "$55,000.00",
+    "Percent change from Starting to Mid-Career Salary": "53.2",
+    "Mid-Career 10th Percentile Salary": "$26,700.00",
+    "Mid-Career 25th Percentile Salary": "$40,200.00",
+    "Mid-Career 75th Percentile Salary": "$88,000.00",
+    "Mid-Career 90th Percentile Salary": "$134,000.00"
+  },
+  {
+    "Undergraduate Major": "Nursing",
+    "Starting Median Salary": "$54,200.00",
+    "Mid-Career Median Salary": "$67,000.00",
+    "Percent change from Starting to Mid-Career Salary": "23.6",
+    "Mid-Career 10th Percentile Salary": "$47,600.00",
+    "Mid-Career 25th Percentile Salary": "$56,400.00",
+    "Mid-Career 75th Percentile Salary": "$80,900.00",
+    "Mid-Career 90th Percentile Salary": "$98,300.00"
+  },
+  {
+    "Undergraduate Major": "Nutrition",
+    "Starting Median Salary": "$39,900.00",
+    "Mid-Career Median Salary": "$55,300.00",
+    "Percent change from Starting to Mid-Career Salary": "38.6",
+    "Mid-Career 10th Percentile Salary": "$33,900.00",
+    "Mid-Career 25th Percentile Salary": "$44,500.00",
+    "Mid-Career 75th Percentile Salary": "$70,500.00",
+    "Mid-Career 90th Percentile Salary": "$99,200.00"
+  },
+  {
+    "Undergraduate Major": "Philosophy",
+    "Starting Median Salary": "$39,900.00",
+    "Mid-Career Median Salary": "$81,200.00",
+    "Percent change from Starting to Mid-Career Salary": "103.5",
+    "Mid-Career 10th Percentile Salary": "$35,500.00",
+    "Mid-Career 25th Percentile Salary": "$52,800.00",
+    "Mid-Career 75th Percentile Salary": "$127,000.00",
+    "Mid-Career 90th Percentile Salary": "$168,000.00"
+  },
+  {
+    "Undergraduate Major": "Physician Assistant",
+    "Starting Median Salary": "$74,300.00",
+    "Mid-Career Median Salary": "$91,700.00",
+    "Percent change from Starting to Mid-Career Salary": "23.4",
+    "Mid-Career 10th Percentile Salary": "$66,400.00",
+    "Mid-Career 25th Percentile Salary": "$75,200.00",
+    "Mid-Career 75th Percentile Salary": "$108,000.00",
+    "Mid-Career 90th Percentile Salary": "$124,000.00"
+  },
+  {
+    "Undergraduate Major": "Physics",
+    "Starting Median Salary": "$50,300.00",
+    "Mid-Career Median Salary": "$97,300.00",
+    "Percent change from Starting to Mid-Career Salary": "93.4",
+    "Mid-Career 10th Percentile Salary": "$56,000.00",
+    "Mid-Career 25th Percentile Salary": "$74,200.00",
+    "Mid-Career 75th Percentile Salary": "$132,000.00",
+    "Mid-Career 90th Percentile Salary": "$178,000.00"
+  },
+  {
+    "Undergraduate Major": "Political Science",
+    "Starting Median Salary": "$40,800.00",
+    "Mid-Career Median Salary": "$78,200.00",
+    "Percent change from Starting to Mid-Career Salary": "91.7",
+    "Mid-Career 10th Percentile Salary": "$41,200.00",
+    "Mid-Career 25th Percentile Salary": "$55,300.00",
+    "Mid-Career 75th Percentile Salary": "$114,000.00",
+    "Mid-Career 90th Percentile Salary": "$168,000.00"
+  },
+  {
+    "Undergraduate Major": "Psychology",
+    "Starting Median Salary": "$35,900.00",
+    "Mid-Career Median Salary": "$60,400.00",
+    "Percent change from Starting to Mid-Career Salary": "68.2",
+    "Mid-Career 10th Percentile Salary": "$31,600.00",
+    "Mid-Career 25th Percentile Salary": "$42,100.00",
+    "Mid-Career 75th Percentile Salary": "$87,500.00",
+    "Mid-Career 90th Percentile Salary": "$127,000.00"
+  },
+  {
+    "Undergraduate Major": "Religion",
+    "Starting Median Salary": "$34,100.00",
+    "Mid-Career Median Salary": "$52,000.00",
+    "Percent change from Starting to Mid-Career Salary": "52.5",
+    "Mid-Career 10th Percentile Salary": "$29,700.00",
+    "Mid-Career 25th Percentile Salary": "$36,500.00",
+    "Mid-Career 75th Percentile Salary": "$70,900.00",
+    "Mid-Career 90th Percentile Salary": "$96,400.00"
+  },
+  {
+    "Undergraduate Major": "Sociology",
+    "Starting Median Salary": "$36,500.00",
+    "Mid-Career Median Salary": "$58,200.00",
+    "Percent change from Starting to Mid-Career Salary": "59.5",
+    "Mid-Career 10th Percentile Salary": "$30,700.00",
+    "Mid-Career 25th Percentile Salary": "$40,400.00",
+    "Mid-Career 75th Percentile Salary": "$81,200.00",
+    "Mid-Career 90th Percentile Salary": "$118,000.00"
+  },
+  {
+    "Undergraduate Major": "Spanish",
+    "Starting Median Salary": "$34,000.00",
+    "Mid-Career Median Salary": "$53,100.00",
+    "Percent change from Starting to Mid-Career Salary": "56.2",
+    "Mid-Career 10th Percentile Salary": "$31,000.00",
+    "Mid-Career 25th Percentile Salary": "$40,000.00",
+    "Mid-Career 75th Percentile Salary": "$76,800.00",
+    "Mid-Career 90th Percentile Salary": "$96,400.00"
+  }
+]
