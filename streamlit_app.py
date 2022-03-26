@@ -90,7 +90,7 @@ if navi == "Data Display":
 
     data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
     st.dataframe(data2)
-    
+
 if navi == "Loan":
     st.write("loan")
 

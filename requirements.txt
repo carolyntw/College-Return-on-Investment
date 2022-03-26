@@ -2,4 +2,6 @@ streamlit
 google-cloud-firestore
 toml
 flask
-st_aggrid
+st_aggrid_AgGrid
+st_aggrid_GridOptionsBuilder
+st_aggrid_shared_GridUpdateMode
