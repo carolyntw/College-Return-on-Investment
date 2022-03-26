@@ -1,26 +1,18 @@
-# *-* coding:utf8 *_*
-# @Time: 2/25/22 00:05
-# @Author: Yan
-# @File: streamlit_app.py
-# @Software: PyCharm
+from google.cloud import firestore
+from google.oauth2 import service_account
 
 import streamlit as st
-from google.cloud import firestore
 import json
+import pandas as pd
 import numpy
-from google.oauth2 import service_account
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
-
-# Authenticate to Firestore with the JSON account key.
-# db = firestore.Client.from_service_account_json("firestore-key.json")
 
 key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-
-navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Loan", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
 
 if navi == "Home":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
@@ -62,8 +54,10 @@ if navi == "Data Display":
     # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
     def aggrid_interactive_table(df: pd.DataFrame):
         """Creates an st-aggrid interactive table based on a dataframe.
+
         Args:
             df (pd.DataFrame]): Source dataframe
+
         Returns:
             dict: The selected row
         """
@@ -97,10 +91,6 @@ if navi == "Data Display":
     data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
     st.dataframe(data2)
 
-if navi == "Loan":
-
-    st.write("load")
-
 if navi == "Contact Us":
     st.header('📝 Feedback')
     st.write("Our Email: jennyyan54@gmail.com")
@@ -118,3 +108,7 @@ if navi == "Contact Us":
         contact = cont[1].selectbox("Contact By", ('Tel.', 'Email'))
         feedback = st.text_area("Feedback")
         submitted = st.form_submit_button(label="Submit")
+
+
+
+
