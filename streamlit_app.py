@@ -7,7 +7,10 @@
 import streamlit as st
 from google.cloud import firestore
 import json
+import numpy
 from google.oauth2 import service_account
+from st_aggrid import AgGrid, GridOptionsBuilder
+from st_aggrid.shared import GridUpdateMode
 
 # Authenticate to Firestore with the JSON account key.
 # db = firestore.Client.from_service_account_json("firestore-key.json")
@@ -17,7 +20,7 @@ creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
 
-navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Loan", "Contact Us"])
 
 if navi == "Home":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
@@ -36,28 +39,67 @@ if navi == "Home":
 
 if navi == "Data Display":
     # Create a reference to the Google post.
-    doc_ref = db.collection("tuition_cost").document("ASA College")
+    # Create dataframe of the university names, state codes
+    df = pd.read_json('data/tuition_cost.json')
+    df2 = pd.read_json('data/degrees-that-pay-back.json')
 
-    form = st.form(key="school_info")
-    with form:
-        cols = st.columns(3)
-        state = cols[0].selectbox(
-            'State',
-            ('CA', 'NY', 'OH'))
-        university = cols[1].selectbox(
-            'University',
-            ('USC', 'SJSU', 'UCLA','UCI'))
-        major = cols[2].selectbox(
-            'Major',
-            ('Computer Science', 'Applied Data Science', 'Art'))
-        submitted = st.form_submit_button(label="Submit")
+    state_code = df['state_code'].unique()
+    state_code_choice = st.selectbox('Select your state:', state_code)
+    university = df['name'].loc[df['state_code'] == state_code_choice].unique()
+    university_choice = st.multiselect('Select your university:', university)
 
-    # Then get the data at that reference.
-    doc = doc_ref.get()
+    df = pd.DataFrame()
+    for i in university_choice:
+        name_doc_ref = db.collection("tuition_cost").document(i)
+        name_doc = name_doc_ref.get()
+        data = pd.DataFrame.from_dict(name_doc.to_dict(), orient='index', columns=[i]).sort_index()
+        data = data.transpose()
+        df = pd.concat([df, data], ignore_index=True)
 
-    # Let's see what we got!
-    st.write("The id is: ", doc.id)
-    st.write("The contents are: ", doc.to_dict())
+    st.dataframe(df)
+
+
+    # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
+    def aggrid_interactive_table(df: pd.DataFrame):
+        """Creates an st-aggrid interactive table based on a dataframe.
+        Args:
+            df (pd.DataFrame]): Source dataframe
+        Returns:
+            dict: The selected row
+        """
+        options = GridOptionsBuilder.from_dataframe(
+            df, enableRowGroup=True, enableValue=True, enablePivot=True
+        )
+
+        options.configure_side_bar()
+
+        options.configure_selection("single")
+        selection = AgGrid(
+            df,
+            enable_enterprise_modules=True,
+            gridOptions=options.build(),
+            theme="light",
+            update_mode=GridUpdateMode.MODEL_CHANGED,
+            allow_unsafe_jscode=True,
+        )
+
+        return selection
+
+
+    selection = aggrid_interactive_table(df=df)
+
+    major = df2['Undergraduate Major'].unique()
+    major_choice = st.selectbox('Select your major:', major)
+
+    major_doc_ref = db.collection("degrees-that-pay-back").document(major_choice)
+    major_doc = major_doc_ref.get()
+
+    data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
+    st.dataframe(data2)
+
+if navi == "Loan":
+
+    st.write("load")
 
 if navi == "Contact Us":
     st.header('📝 Feedback')
