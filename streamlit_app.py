@@ -12,7 +12,7 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Loan", "Contact Us"])
 
 if navi == "Home":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
@@ -90,6 +90,9 @@ if navi == "Data Display":
 
     data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
     st.dataframe(data2)
+    
+if navi == "Loan":
+    st.write("loan")
 
 if navi == "Contact Us":
     st.header('📝 Feedback')
