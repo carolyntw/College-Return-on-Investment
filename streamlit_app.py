@@ -40,13 +40,17 @@ if navi == "Data Display":
     state_code = df['state_code'].unique()  
     state_code_choice = st.selectbox('Select your state:', state_code)
     university = df['name'].loc[df['state_code'] == state_code_choice].unique()  
-    university_choice = st.selectbox('Select your university:', university)
+    university_choice = st.multiselect('Select your university:', university)
 
-    name_doc_ref = db.collection("tuition_cost").document(university_choice)
-    name_doc = name_doc_ref.get()
-    data = pd.DataFrame.from_dict(name_doc.to_dict(), orient='index', columns=[university_choice])
-    data = data.transpose()
-    # st.dataframe(data)
+    df = pd.DataFrame()
+    for i in university_choice:
+        name_doc_ref = db.collection("tuition_cost").document(i)
+        name_doc = name_doc_ref.get()
+        data = pd.DataFrame.from_dict(name_doc.to_dict(), orient='index', columns=[i]).sort_index()
+        data = data.transpose()
+        df = pd.concat([df, data], ignore_index=True)
+
+    st.dataframe(df)
 
     # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
     def aggrid_interactive_table(df: pd.DataFrame):
@@ -76,13 +80,19 @@ if navi == "Data Display":
 
         return selection
 
-    selection = aggrid_interactive_table(df=data)
+    selection = aggrid_interactive_table(df=df)
+
+    
     major = df2['Undergraduate Major'].unique()  
     major_choice = st.selectbox('Select your major:', major) 
+
     major_doc_ref = db.collection("degrees-that-pay-back").document(major_choice)
     major_doc = major_doc_ref.get()
+
     data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
     st.dataframe(data2)
+
+
 
 if navi == "Contact Us":
     st.header('📝 Feedback')
@@ -101,3 +111,8 @@ if navi == "Contact Us":
         contact = cont[1].selectbox("Contact By", ('Tel.', 'Email'))
         feedback = st.text_area("Feedback")
         submitted = st.form_submit_button(label="Submit")
+
+
+
+
+
