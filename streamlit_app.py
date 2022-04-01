@@ -40,6 +40,25 @@ if navi == "Data Display":
     university = df['name'].loc[df['state_code'] == state_code_choice].unique()
     university_choice = st.multiselect('Select your university:', university)
 
+    # state_code1 = []
+    # colleges = db.collection("tuition_cost").stream()
+    # for college in colleges:
+    #     st.write("!")
+    #     state_c = college.to_dict()["state_code"]
+    #     st.write(state_c)
+    #     if state_c not in state_code1:
+    #         state_code1.append(state_c)
+
+    # q = table.where(u'state_code', u'==', True)
+    # for i in db.collection("tuition_cost").get().id:
+    #     st.write(i)
+    docs = db.collection("tuition_cost").stream()
+    st.write("111")
+    for doc in docs:
+        st.write(doc.to_dict()["state_code"])
+    # st.write(len(state_code1))
+    st.write(len(state_code))
+
     df = pd.DataFrame()
     for i in university_choice:
         name_doc_ref = db.collection("tuition_cost").document(i)
