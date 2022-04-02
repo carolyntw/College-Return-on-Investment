@@ -3,3 +3,5 @@ google-cloud-firestore
 toml
 flask
 streamlit-aggrid
+matplotlib
+streamlit_plotly_events

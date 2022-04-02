@@ -7,6 +7,7 @@ import pandas as pd
 import numpy
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
+import matplotlib.pyplot as plt
 
 key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
@@ -49,27 +50,90 @@ if navi == "Data Display":
     #     if state_c not in state_code1:
     #         state_code1.append(state_c)
 
-    # q = table.where(u'state_code', u'==', True)
-    # for i in db.collection("tuition_cost").get().id:
-    #     st.write(i)
-    # docs = db.collection("tuition_cost").stream()
-    # st.write(docs)
-    # for doc in docs:
-    #     db.collection("tuition_cost").document(doc).get()
-    #     st.write("!")
-    #     st.write(doc.id)
-    # st.write(len(state_code1))
-    # st.write(len(state_code))
-
-    df = pd.DataFrame()
+    data_dict = {}
+    # column = ["College", "In State Total", "Out Of State Total", "Debt", "Early Career Pay", "Debt-Income Ratio"]
+    all_tuition = []
+    all_ratio = []
+    
+    all_college = pd.DataFrame()
     for i in university_choice:
         name_doc_ref = db.collection("tuition_cost").document(i)
         name_doc = name_doc_ref.get()
-        data = pd.DataFrame.from_dict(name_doc.to_dict(), orient='index', columns=[i]).sort_index()
-        data = data.transpose()
-        df = pd.concat([df, data], ignore_index=True)
 
-    st.dataframe(df)
+        data_dict["College"] = [name_doc.id]
+        in_tuition = name_doc.to_dict()["in_state_total"]
+        data_dict["In State Total"] = [in_tuition]
+        out_tuition = name_doc.to_dict()["out_of_state_total"]
+        data_dict["Out Of State Total"] = [out_tuition]
+        all_tuition.append(out_tuition)
+        # data = pd.DataFrame.from_dict(datas, orient='index', columns=[i]).sort_index()
+        # data = data.transpose()
+
+        # get the debt
+        debt = 0
+        state = name_doc.to_dict()["state"]
+        loan_by_state = db.collection("student_loan_by_state").document(state)
+        loan = loan_by_state.get()
+        if loan.exists:
+            loan_2021 = loan.to_dict()["2021"]
+            data_dict["Debt"] = [loan_2021]
+            debt = loan_2021
+        else:
+            data_dict["Debt"] = ["No data for this college"]
+
+        # get the tuition fee
+        income = 0
+        salary_potential = db.collection("salary_potential").document(i)
+        salary = salary_potential.get()
+        if salary.exists:
+            early_pay_back = salary.to_dict()["early_career_pay"]
+            data_dict["Early Career Pay"] = [early_pay_back]
+            income = early_pay_back
+        else:
+            data_dict["Early Career Pay"] = ["No data for this college"]
+
+
+        if income == 0:
+            data_dict["Debt-Income Ratio"] = ["No enough data"]
+            all_ratio.append(0)
+        else:
+            ration = debt / income
+            data_dict["Debt-Income Ratio"] = [ration]
+            all_ratio.append(ration)
+
+        one_college = pd.DataFrame(data_dict)
+
+        all_college = pd.concat([all_college, one_college], ignore_index=True)
+
+        # salary_potential = db.collection("salary_potential").document(i)
+        # salary = doc_ref.get()
+        # if salary.exists:
+        #
+        # else:
+        #     early_pay_back = salary_potential.to_dict()["early_career_pay"]
+
+
+    # st.dataframe(all_college)
+    import altair as alt
+    # plot the data
+    # all_college["Debt"]
+    # st.write(all_college["Out Of State Total"][1])
+    # c = alt.Chart(all_college).mark_circle().encode(
+    #     x='Out Of State Total', y='Debt-Income Ratio', size='College', color='c',
+    #     tooltip=['Out Of State Total', 'Debt-Income Ratio', 'College']
+
+    numpy_tuition = numpy.array(all_tuition)
+    numpy_ratio = numpy.array(all_ratio)
+    # plt.figure(figsize=(1, 1))
+    width = st.sidebar.slider("plot width", 0.1, 25., 3.)
+    height = st.sidebar.slider("plot height", 0.1, 25., 1.)
+
+    fig, ax = plt.subplots(figsize=(width, height))
+    # fig, ax = plt.subplots(figsize=(1, 1))
+    ax.scatter(numpy_tuition, numpy_ratio, marker='o')
+    # ax.legend(loc='upper center', shadow=True, fontsize='x-large')
+
+    st.pyplot(fig)
 
 
     # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
@@ -101,7 +165,7 @@ if navi == "Data Display":
         return selection
 
 
-    selection = aggrid_interactive_table(df=df)
+    selection = aggrid_interactive_table(df=all_college)
 
     major = df2['Undergraduate Major'].unique()
     major_choice = st.selectbox('Select your major:', major)
