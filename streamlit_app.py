@@ -52,12 +52,14 @@ if navi == "Data Display":
     # q = table.where(u'state_code', u'==', True)
     # for i in db.collection("tuition_cost").get().id:
     #     st.write(i)
-    docs = db.collection("tuition_cost").stream()
-    st.write("111")
-    for doc in docs:
-        st.write(doc.to_dict()["state_code"])
+    # docs = db.collection("tuition_cost").stream()
+    # st.write(docs)
+    # for doc in docs:
+    #     db.collection("tuition_cost").document(doc).get()
+    #     st.write("!")
+    #     st.write(doc.id)
     # st.write(len(state_code1))
-    st.write(len(state_code))
+    # st.write(len(state_code))
 
     df = pd.DataFrame()
     for i in university_choice:
