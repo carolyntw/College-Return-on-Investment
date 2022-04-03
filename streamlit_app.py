@@ -178,6 +178,7 @@ if navi == "Data Display":
 
 if navi == "Loan":
     st.write("loan")
+    #comment
 
 if navi == "Contact Us":
     st.header('📝 Feedback')
