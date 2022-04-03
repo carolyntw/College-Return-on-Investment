@@ -36,9 +36,9 @@ if navi == "Data Display":
     df = pd.read_json('data/tuition_cost.json')
     df2 = pd.read_json('data/degrees-that-pay-back.json')
 
-    state_code = df['state_code'].unique()
-    state_code_choice = st.selectbox('Select your state:', state_code)
-    university = df['name'].loc[df['state_code'] == state_code_choice].unique()
+    state = df['state'].unique()
+    state_choice = st.selectbox('Select your state:', state)
+    university = df['name'].loc[df['state'] == state_choice].unique()
     university_choice = st.multiselect('Select your university:', university)
 
     # state_code1 = []
