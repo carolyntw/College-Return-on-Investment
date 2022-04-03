@@ -178,11 +178,12 @@ if navi == "Data Display":
 
 if navi == "Loan":
     st.subheader("The amount of loan: ")
-    total_loan = a = st.number_input()
+    total_loan = st.number_input()
     st.subheader('Monthly payment: ')
     monthly_pay = st.number_input()
     st.subheader('Estimated annual interest (%): ')
     annual_interest = st.number_input()
+    
     monthly_interest = annual_interest/100/12
 
     monthly_balance = total_loan - monthly_pay
