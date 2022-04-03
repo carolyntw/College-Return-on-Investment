@@ -177,7 +177,7 @@ if navi == "Data Display":
     st.dataframe(data2)
 
 if navi == "Loan":
-    total_loan = a = st.number_input('Loan: ')
+    total_loan = a = st.number_input('The amount of loan: ')
     monthly_pay = st.number_input('Monthly payment: ')
     annual_interest = st.number_input('Estimated annual interest (%): ')
     monthly_interest = annual_interest/100/12
@@ -189,8 +189,8 @@ if navi == "Loan":
     while i < 1200:
         monthly_balance = monthly_balance + interest -monthly_pay
         interest = monthly_balance * monthly_interest
-
-        if monthly_balance < monthly_pay:
+                
+        if monthly_balance < monthly_pay and st.button('Calculate'):
             st.write('Time to pay off loan debt:', i + 1, 'month(s) or', '{:.2f}'.format((i+1)/12, 2), 'year(s).')
             st.write('The total balance paid: $', "{:.2f}".format(round(monthly_pay*i + monthly_balance + interest, 2)))
             break
