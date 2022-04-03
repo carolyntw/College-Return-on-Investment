@@ -36,9 +36,9 @@ if navi == "Data Display":
     df = pd.read_json('data/tuition_cost.json')
     df2 = pd.read_json('data/degrees-that-pay-back.json')
 
-    state_code = df['state_code'].unique()
-    state_code_choice = st.selectbox('Select your state:', state_code)
-    university = df['name'].loc[df['state_code'] == state_code_choice].unique()
+    state = df['state'].unique()
+    state_choice = st.selectbox('Select your state:', state)
+    university = df['name'].loc[df['state'] == state_choice].unique()
     university_choice = st.multiselect('Select your university:', university)
 
     # state_code1 = []
@@ -54,7 +54,7 @@ if navi == "Data Display":
     # column = ["College", "In State Total", "Out Of State Total", "Debt", "Early Career Pay", "Debt-Income Ratio"]
     all_tuition = []
     all_ratio = []
-    
+
     all_college = pd.DataFrame()
     for i in university_choice:
         name_doc_ref = db.collection("tuition_cost").document(i)
@@ -92,12 +92,11 @@ if navi == "Data Display":
         else:
             data_dict["Early Career Pay"] = ["No data for this college"]
 
-
         if income == 0:
             data_dict["Debt-Income Ratio"] = ["No enough data"]
             all_ratio.append(0)
         else:
-            ration = debt / income
+            ration = debt / int(income)
             data_dict["Debt-Income Ratio"] = [ration]
             all_ratio.append(ration)
 
@@ -112,9 +111,9 @@ if navi == "Data Display":
         # else:
         #     early_pay_back = salary_potential.to_dict()["early_career_pay"]
 
-
     # st.dataframe(all_college)
     import altair as alt
+
     # plot the data
     # all_college["Debt"]
     # st.write(all_college["Out Of State Total"][1])
@@ -177,7 +176,27 @@ if navi == "Data Display":
     st.dataframe(data2)
 
 if navi == "Loan":
-    st.write("loan")
+    total_loan = st.number_input('The amount of loan: ')
+    monthly_pay = st.number_input('Monthly payment: ')
+    annual_interest = st.number_input('Estimated annual interest (%): ')
+
+    monthly_interest = annual_interest / 100 / 12
+
+    monthly_balance = total_loan - monthly_pay
+    interest = monthly_balance * monthly_interest
+    if st.button('Calculate'):
+        i = 2
+        while i < 1200:
+            monthly_balance = monthly_balance + interest - monthly_pay
+            interest = monthly_balance * monthly_interest
+
+            if monthly_balance < monthly_pay:
+                st.write('Time to pay off loan debt:', i + 1, 'month(s) or', '{:.2f}'.format((i + 1) / 12, 2),
+                         'year(s).')
+                st.write('The total balance paid: $',
+                         "{:.2f}".format(round(monthly_pay * i + monthly_balance + interest, 2)))
+                break
+            i += 1
 
 if navi == "Contact Us":
     st.header('📝 Feedback')
