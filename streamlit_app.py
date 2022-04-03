@@ -177,9 +177,25 @@ if navi == "Data Display":
     st.dataframe(data2)
 
 if navi == "Loan":
-    st.write("loan")
-    #comment
+    total_loan = a = st.number_input('Loan: ')
+    monthly_pay = st.number_input('Monthly payment: ')
+    annual_interest = st.number_input('Estimated annual interest (%): ')
+    monthly_interest = annual_interest/100/12
 
+    monthly_balance = total_loan - monthly_pay
+    interest = monthly_balance * monthly_interest
+
+    i = 2
+    while i < 1200:
+        monthly_balance = monthly_balance + interest -monthly_pay
+        interest = monthly_balance * monthly_interest
+
+        if monthly_balance < monthly_pay:
+            st.write('Time to pay off loan debt:', i + 1, 'month(s) or', '{:.2f}'.format((i+1)/12, 2), 'year(s).')
+            st.write('The total balance paid: $', "{:.2f}".format(round(monthly_pay*i + monthly_balance + interest, 2)))
+            break
+        i +=1
+    
 if navi == "Contact Us":
     st.header('📝 Feedback')
     st.write("Our Email: jennyyan54@gmail.com")
