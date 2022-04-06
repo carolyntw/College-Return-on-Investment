@@ -60,7 +60,7 @@ if navi == "Data Display":
     all_ratio = []
 
     all_college = pd.DataFrame()
-    for i in university_choice:
+    for i in university_list:
         name_doc_ref = db.collection("tuition_cost").document(i)
         name_doc = name_doc_ref.get()
 
