@@ -34,25 +34,32 @@ if navi == "Data Display":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
     df = pd.read_json('data/tuition_cost.json')
-    df2 = pd.read_json('data/degrees-that-pay-back.json')
+    # df2 = pd.read_json('data/degrees-that-pay-back.json')
 
-    state = df['state'].unique()
-    state_choice = st.multiselect('Select your state:', state)
+    # state = df['state'].unique()
+
+    state_code = []
+    colleges = db.collection("tuition_cost")
+    colleges_stream = colleges.stream()
+    for college in colleges_stream:
+        state_c = college.to_dict()["state"]
+        if state_c not in state_code:
+            state_code.append(state_c)
+
+    state_choice = st.multiselect('Select your state:', state_code)
     university_list = []
     for i in state_choice:
-        university = df['name'].loc[df['state'] == i].unique()
-        university_choice = st.multiselect('Select your university:', university)
-        university_list.append(university_choice)
-    st.write(university_list)
+        # university = df['name'].loc[df['state'] == i].unique()
+        universities = colleges.where(u'state', u'==', i).stream()
+        # st.write(universities)
+        for university in universities:
+            university_name = university.id
+            # st.write(university_name)
+            university_list.append(university_name)
+        # for n in university:
+        #     university_list.append(n)
 
-    # state_code1 = []
-    # colleges = db.collection("tuition_cost").stream()
-    # for college in colleges:
-    #     st.write("!")
-    #     state_c = college.to_dict()["state_code"]
-    #     st.write(state_c)
-    #     if state_c not in state_code1:
-    #         state_code1.append(state_c)
+    university_choice = st.multiselect('Select your university:', university_list)
 
     data_dict = {}
     # column = ["College", "In State Total", "Out Of State Total", "Debt", "Early Career Pay", "Debt-Income Ratio"]
@@ -60,7 +67,7 @@ if navi == "Data Display":
     all_ratio = []
 
     all_college = pd.DataFrame()
-    for i in university_list:
+    for i in university_choice:
         name_doc_ref = db.collection("tuition_cost").document(i)
         name_doc = name_doc_ref.get()
 
