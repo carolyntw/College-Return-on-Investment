@@ -13,11 +13,13 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-navi = st.sidebar.radio("Navigation", ["Home", "Data Display", "Loan", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["Home", "College", "Loan Repayment Calculator", "Contact Us"])
 
 if navi == "Home":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
     # st.title("🎓 Diploma PDF Generator")
+    with open('choice.txt', 'w') as f:
+        f.write('None')
     st.header('🎓 College Returen on Investment')
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
@@ -30,163 +32,227 @@ if navi == "Home":
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
 
-if navi == "Data Display":
+if navi == "College":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
-    df = pd.read_json('data/tuition_cost.json')
-    # df2 = pd.read_json('data/degrees-that-pay-back.json')
+    st.header('🎓 College Returen on Investment')
+    st.write("Don't know which university to go to?")
+    st.write("Don't know which major is financially prosperous?")
+    st.write("We got you! Choose the category you wanna explore further.")
 
-    # state = df['state'].unique()
+    choice = ''
+    with open('choice.txt') as f:
+        choice = f.readlines()
 
-    state_code = []
-    colleges = db.collection("tuition_cost")
-    colleges_stream = colleges.stream()
-    for college in colleges_stream:
-        state_c = college.to_dict()["state"]
-        if state_c not in state_code:
-            state_code.append(state_c)
+    left, right = st.columns(2)
+    with left:
+        university_button = st.button("Universities")
+    with right:
+        major_button = st.button("Majories")
 
-    state_choice = st.multiselect('Select your state:', state_code)
-    university_list = []
-    for i in state_choice:
-        # university = df['name'].loc[df['state'] == i].unique()
-        universities = colleges.where(u'state', u'==', i).stream()
-        # st.write(universities)
-        for university in universities:
-            university_name = university.id
-            # st.write(university_name)
-            university_list.append(university_name)
-        # for n in university:
-        #     university_list.append(n)
+    # university_button = st.button("Universities")
+    # major_button = st.button("Majories")
+    # st.write(university_button)
+    # st.write(major_button)
 
-    university_choice = st.multiselect('Select your university:', university_list)
+    if university_button == False and major_button == False and choice[0] == 'university':
+        university_button = True
+        # major_button = False
+    if university_button == False and major_button == False and choice[0] == 'major':
+        major_button = True
+        # university_button = False
 
-    data_dict = {}
-    # column = ["College", "In State Total", "Out Of State Total", "Debt", "Early Career Pay", "Debt-Income Ratio"]
-    all_tuition = []
-    all_ratio = []
+    if university_button:
+        with open('choice.txt', 'w') as f:
+            f.write('university')
+    if major_button:
+        with open('choice.txt', 'w') as f:
+            f.write('major')
 
-    all_college = pd.DataFrame()
-    for i in university_choice:
-        name_doc_ref = db.collection("tuition_cost").document(i)
-        name_doc = name_doc_ref.get()
+    # st.write(university_button)
+    # st.write(major_button)
 
-        data_dict["College"] = [name_doc.id]
-        in_tuition = name_doc.to_dict()["in_state_total"]
-        data_dict["In State Total"] = [in_tuition]
-        out_tuition = name_doc.to_dict()["out_of_state_total"]
-        data_dict["Out Of State Total"] = [out_tuition]
-        all_tuition.append(out_tuition)
-        # data = pd.DataFrame.from_dict(datas, orient='index', columns=[i]).sort_index()
-        # data = data.transpose()
+    if university_button:
 
-        # get the debt
-        debt = 0
-        state = name_doc.to_dict()["state"]
-        loan_by_state = db.collection("student_loan_by_state").document(state)
-        loan = loan_by_state.get()
-        if loan.exists:
-            loan_2021 = loan.to_dict()["2021"]
-            data_dict["Debt"] = [loan_2021]
-            debt = loan_2021
-        else:
-            data_dict["Debt"] = ["No data for this college"]
+        # df = pd.read_json('data/tuition_cost.json')
+        # df2 = pd.read_json('data/degrees-that-pay-back.json')
 
-        # get the tuition fee
-        income = 0
-        salary_potential = db.collection("salary_potential").document(i)
-        salary = salary_potential.get()
-        if salary.exists:
-            early_pay_back = salary.to_dict()["early_career_pay"]
-            data_dict["Early Career Pay"] = [early_pay_back]
-            income = early_pay_back
-        else:
-            data_dict["Early Career Pay"] = ["No data for this college"]
+        # state = df['state'].unique()
 
-        if income == 0:
-            data_dict["Debt-Income Ratio"] = ["No enough data"]
-            all_ratio.append(0)
-        else:
-            ration = debt / int(income)
-            data_dict["Debt-Income Ratio"] = [ration]
-            all_ratio.append(ration)
+        colleges = db.collection("tuition_cost")
+        colleges_stream = colleges.stream()
+        # state_code = []
+        # for college in colleges_stream:
+        #     state_c = college.to_dict()["state"]
+        #     if state_c not in state_code:
+        #         state_code.append(state_c)
 
-        one_college = pd.DataFrame(data_dict)
+        # state_choice = st.multiselect('Select your state:', state_code)
+        # university_list = []
+        # for i in state_choice:
+        #     # university = df['name'].loc[df['state'] == i].unique()
+        #     universities = colleges.where(u'state', u'==', i).stream()
+        #     # st.write(universities)
+        #     for university in universities:
+        #         university_name = university.id
+        #         # st.write(university_name)
+        #         university_list.append(university_name)
+        #     # for n in university:
+        #     #     university_list.append(n)
+        university_list = []
+        for college in colleges_stream:
+            university = college.id
+            university_list.append(university)
+            # if state_c not in state_code:
+            #     state_code.append(state_c)
+        s_dict = pd.read_json('data/salary_potential.json')
+        t_dict = pd.read_json('data/tuition_cost.json')
+        merge = pd.merge(s_dict, t_dict, on="name")
+        final_university = merge['name']
+        # salaries = db.collection("salary_potential").stream()
+        # st.write(len(salaries))
 
-        all_college = pd.concat([all_college, one_college], ignore_index=True)
+        # final_university = []
+        # for salary in salaries:
+        #     if salary.id in university_list:
+        #         university_list.append(salary.id)
+        # print()
+        university_choice = st.multiselect('Select your university:', final_university)
+        # university_choice2 = st.select('Select your university:', university_list)
+        # university_choice3 = st.select('Select your university:', university_list)
 
-        # salary_potential = db.collection("salary_potential").document(i)
-        # salary = doc_ref.get()
-        # if salary.exists:
-        #
-        # else:
-        #     early_pay_back = salary_potential.to_dict()["early_career_pay"]
+        data_dict = {}
+        # column = ["College", "In State Total", "Out Of State Total", "Debt", "Early Career Pay", "Debt-Income Ratio"]
+        all_tuition = []
+        all_ratio = []
 
-    # st.dataframe(all_college)
-    import altair as alt
+        all_college = pd.DataFrame()
+        for i in university_choice:
+            name_doc_ref = db.collection("tuition_cost").document(i)
+            name_doc = name_doc_ref.get()
 
-    # plot the data
-    # all_college["Debt"]
-    # st.write(all_college["Out Of State Total"][1])
-    # c = alt.Chart(all_college).mark_circle().encode(
-    #     x='Out Of State Total', y='Debt-Income Ratio', size='College', color='c',
-    #     tooltip=['Out Of State Total', 'Debt-Income Ratio', 'College']
+            data_dict["College"] = [name_doc.id]
+            in_tuition = name_doc.to_dict()["in_state_total"]
+            data_dict["In State Total"] = [in_tuition]
+            out_tuition = name_doc.to_dict()["out_of_state_total"]
+            data_dict["Out Of State Total"] = [out_tuition]
+            all_tuition.append(out_tuition)
+            # data = pd.DataFrame.from_dict(datas, orient='index', columns=[i]).sort_index()
+            # data = data.transpose()
 
-    numpy_tuition = numpy.array(all_tuition)
-    numpy_ratio = numpy.array(all_ratio)
-    # plt.figure(figsize=(1, 1))
-    width = st.sidebar.slider("plot width", 0.1, 25., 3.)
-    height = st.sidebar.slider("plot height", 0.1, 25., 1.)
+            # get the debt
+            debt = 0
+            state = name_doc.to_dict()["state"]
+            st.write(state)
+            loan_by_state = db.collection("student-loan-by-state").document(state)
+            loan = loan_by_state.get()
+            if loan.exists:
+                loan_2021 = loan.to_dict()["2021"]
+                data_dict["Debt"] = [loan_2021]
+                debt = loan_2021
+            else:
+                data_dict["Debt"] = ["No data for this college"]
 
-    fig, ax = plt.subplots(figsize=(width, height))
-    # fig, ax = plt.subplots(figsize=(1, 1))
-    ax.scatter(numpy_tuition, numpy_ratio, marker='o')
-    # ax.legend(loc='upper center', shadow=True, fontsize='x-large')
+            # get the tuition fee
+            income = 0
+            salary_potential = db.collection("salary_potential").document(i)
+            salary = salary_potential.get()
+            if salary.exists:
+                early_pay_back = salary.to_dict()["early_career_pay"]
+                data_dict["Early Career Pay"] = [early_pay_back]
+                income = early_pay_back
+            else:
+                data_dict["Early Career Pay"] = ["No data for this college"]
 
-    st.pyplot(fig)
+            if income == 0:
+                data_dict["Debt-Income Ratio"] = ["No enough data"]
+                all_ratio.append(0)
+            else:
+                ration = int(debt) / int(income)
+                data_dict["Debt-Income Ratio"] = [ration]
+                all_ratio.append(ration)
+
+            one_college = pd.DataFrame(data_dict)
+
+            all_college = pd.concat([all_college, one_college], ignore_index=True)
+
+            # salary_potential = db.collection("salary_potential").document(i)
+            # salary = doc_ref.get()
+            # if salary.exists:
+            #
+            # else:
+            #     early_pay_back = salary_potential.to_dict()["early_career_pay"]
+
+        # st.dataframe(all_college)
+        import altair as alt
+
+        # plot the data
+        # all_college["Debt"]
+        # st.write(all_college["Out Of State Total"][1])
+        # c = alt.Chart(all_college).mark_circle().encode(
+        #     x='Out Of State Total', y='Debt-Income Ratio', size='College', color='c',
+        #     tooltip=['Out Of State Total', 'Debt-Income Ratio', 'College']
+
+        numpy_tuition = numpy.array(all_tuition)
+        numpy_ratio = numpy.array(all_ratio)
+        # plt.figure(figsize=(1, 1))
+        # width = st.sidebar.slider("plot width", 0.1, 25., 3.)
+        # height = st.sidebar.slider("plot height", 0.1, 25., 1.)
+
+        fig, ax = plt.subplots(figsize=(3, 1.5))
+        # fig, ax = plt.subplots(figsize=(1, 1))
+        ax.scatter(numpy_tuition, numpy_ratio, marker='o')
+        # ax.legend(loc='upper center', shadow=True, fontsize='x-large')
+
+        st.pyplot(fig)
 
 
-    # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
-    def aggrid_interactive_table(df: pd.DataFrame):
-        """Creates an st-aggrid interactive table based on a dataframe.
+        # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
+        def aggrid_interactive_table(df: pd.DataFrame):
+            """Creates an st-aggrid interactive table based on a dataframe.
 
-        Args:
-            df (pd.DataFrame]): Source dataframe
+            Args:
+                df (pd.DataFrame]): Source dataframe
 
-        Returns:
-            dict: The selected row
-        """
-        options = GridOptionsBuilder.from_dataframe(
-            df, enableRowGroup=True, enableValue=True, enablePivot=True
-        )
+            Returns:
+                dict: The selected row
+            """
+            options = GridOptionsBuilder.from_dataframe(
+                df, enableRowGroup=True, enableValue=True, enablePivot=True
+            )
 
-        options.configure_side_bar()
+            options.configure_side_bar()
 
-        options.configure_selection("single")
-        selection = AgGrid(
-            df,
-            enable_enterprise_modules=True,
-            gridOptions=options.build(),
-            theme="light",
-            update_mode=GridUpdateMode.MODEL_CHANGED,
-            allow_unsafe_jscode=True,
-        )
+            options.configure_selection("single")
+            selection = AgGrid(
+                df,
+                enable_enterprise_modules=True,
+                gridOptions=options.build(),
+                theme="light",
+                update_mode=GridUpdateMode.MODEL_CHANGED,
+                allow_unsafe_jscode=True,
+            )
 
-        return selection
+            return selection
 
 
-    selection = aggrid_interactive_table(df=all_college)
+        selection = aggrid_interactive_table(df=all_college)
 
-    major = df2['Undergraduate Major'].unique()
-    major_choice = st.selectbox('Select your major:', major)
+    if major_button:
+        with open('choice.txt', 'w') as f:
+            f.write('major')
+    # major = df2['Undergraduate Major'].unique()
+    # major_choice = st.selectbox('Select your major:', major)
+    #
+    # major_doc_ref = db.collection("degrees-that-pay-back").document(major_choice)
+    # major_doc = major_doc_ref.get()
+    #
+    # data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
+    # st.dataframe(data2)
 
-    major_doc_ref = db.collection("degrees-that-pay-back").document(major_choice)
-    major_doc = major_doc_ref.get()
-
-    data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
-    st.dataframe(data2)
-
-if navi == "Loan":
+if navi == "Loan Repayment Calculator":
+    with open('choice.txt', 'w') as f:
+        f.write('None')
     total_loan = st.number_input('The amount of loan: ')
     monthly_pay = st.number_input('Monthly payment: ')
     annual_interest = st.number_input('Estimated annual interest (%): ')
@@ -210,6 +276,8 @@ if navi == "Loan":
             i += 1
 
 if navi == "Contact Us":
+    with open('choice.txt', 'w') as f:
+        f.write('None')
     st.header('📝 Feedback')
     st.write("Our Email: jennyyan54@gmail.com")
     st.subheader("Send Us Your Feedback")
@@ -226,6 +294,3 @@ if navi == "Contact Us":
         contact = cont[1].selectbox("Contact By", ('Tel.', 'Email'))
         feedback = st.text_area("Feedback")
         submitted = st.form_submit_button(label="Submit")
-
-
-
