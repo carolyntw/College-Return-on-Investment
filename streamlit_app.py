@@ -1,13 +1,18 @@
+from os import major
+from turtle import color
 from google.cloud import firestore
 from google.oauth2 import service_account
 
 import streamlit as st
 import json
 import pandas as pd
-import numpy
+import numpy as np
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 import matplotlib.pyplot as plt
+import plotly.figure_factory as ff
+import plotly.graph_objects as go
+import plotly.express as px
 
 key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
@@ -193,8 +198,8 @@ if navi == "College":
         #     x='Out Of State Total', y='Debt-Income Ratio', size='College', color='c',
         #     tooltip=['Out Of State Total', 'Debt-Income Ratio', 'College']
 
-        numpy_tuition = numpy.array(all_tuition)
-        numpy_ratio = numpy.array(all_ratio)
+        numpy_tuition = np.array(all_tuition)
+        numpy_ratio = np.array(all_ratio)
         # plt.figure(figsize=(1, 1))
         # width = st.sidebar.slider("plot width", 0.1, 25., 3.)
         # height = st.sidebar.slider("plot height", 0.1, 25., 1.)
@@ -239,17 +244,84 @@ if navi == "College":
         selection = aggrid_interactive_table(df=all_college)
 
     if major_button:
-        with open('choice.txt', 'w') as f:
-            f.write('major')
-    # major = df2['Undergraduate Major'].unique()
-    # major_choice = st.selectbox('Select your major:', major)
-    #
-    # major_doc_ref = db.collection("degrees-that-pay-back").document(major_choice)
-    # major_doc = major_doc_ref.get()
-    #
-    # data2 = pd.DataFrame.from_dict(major_doc.to_dict(), orient='index', columns=['major'])
-    # st.dataframe(data2)
+        # with open('choice.txt', 'w') as f:
+        #     f.write('major')
+        majors = db.collection("degrees-that-pay-back")
+        majors_stream = majors.stream() 
+        majors_list = []
+        for majors in majors_stream:
+            major = majors.id
+            majors_list.append(major)
+        m_dict = pd.read_json('data/degrees-that-pay-back.json')
+        del m_dict["Percent change from Starting to Mid-Career Salary"]
+        del m_dict["Mid-Career Median Salary"]
+        m_data = pd.DataFrame(m_dict)
 
+        majors_choice = st.multiselect('Select your major (At most three):',m_dict)
+        major_dict = {}
+        all_major = pd.DataFrame()
+        for i in majors_choice:
+            major_doc_ref = db.collection('degrees-that-pay-back').document(i)
+            major_doc = major_doc_ref.get()
+            major_dict["Undergraduate Major"] = [major_doc.id]
+
+            one_major = pd.DataFrame(major_dict)
+            all_major = pd.concat([all_major,one_major],ignore_index=True)
+        if len(all_major) > 0:
+            final_m_data = all_major.merge(m_data, on = "Undergraduate Major")
+  
+  
+            plot = final_m_data.drop(columns=['Undergraduate Major'])    
+            plot = plot.replace('\$','', regex=True).replace('\.','', regex=True).replace('\,','', regex=True)
+            if len(final_m_data) == 1:
+                
+                x1_columnName =  plot.columns.values.tolist()
+                x1_rowValue = plot.loc[0,:].values.tolist()
+                n = 5
+                r = np.arange(n)
+                width = 0.25
+                fig = plt.figure(figsize = (24,6))
+                plt.rcParams['font.size'] = '14'
+                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = 'Major1')
+                plt.xticks(r+width/4,x1_columnName)
+                plt.legend(prop={"size":18})
+                st.pyplot(fig)
+
+            elif len(final_m_data) == 2:
+                x1_columnName =  plot.columns.values.tolist()
+                x1_rowValue = plot.loc[0, :].values.tolist()
+                x2_rowValue = plot.loc[1, :].values.tolist()
+
+                n = 5
+                r = np.arange(n)
+                width = 0.25
+                fig = plt.figure(figsize = (24,6))
+                plt.rcParams['font.size'] = '14'
+                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = 'Major1')
+                plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = 'Major2')
+                plt.xticks(r+width/3,x1_columnName)
+                plt.legend(prop={"size":18})
+                st.pyplot(fig)
+
+            elif len(final_m_data) == 3:
+                x1_columnName =  plot.columns.values.tolist()
+                x1_rowValue = plot.loc[0, :].values.tolist()
+                x2_rowValue = plot.loc[1, :].values.tolist()
+                x3_rowValue = plot.loc[2, :].values.tolist()
+
+                n = 5
+                r = np.arange(n)
+                width = 0.25
+                fig = plt.figure(figsize = (24,6))
+                plt.rcParams['font.size'] = '14'
+                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = 'Major1')
+                plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = 'Major2')
+                plt.bar(r+0.5,x3_rowValue,color = 'orangered',width = width,edgecolor = 'black',label = 'Major3')
+                plt.xticks(r+width,x1_columnName)
+                plt.legend(prop={"size":18})
+                st.pyplot(fig)
+
+    
 if navi == "Loan Repayment Calculator":
     with open('choice.txt', 'w') as f:
         f.write('None')
