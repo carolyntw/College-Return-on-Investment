@@ -1,5 +1,4 @@
 from os import major
-from turtle import color
 from google.cloud import firestore
 from google.oauth2 import service_account
 
@@ -149,7 +148,7 @@ if navi == "College":
             debt = 0
             state = name_doc.to_dict()["state"]
             st.write(state)
-            loan_by_state = db.collection("student-loan-by-state").document(state)
+            loan_by_state = db.collection("student-loan-by-state").document(state).limit(10)
             loan = loan_by_state.get()
             if loan.exists:
                 loan_2021 = loan.to_dict()["2021"]
@@ -160,7 +159,7 @@ if navi == "College":
 
             # get the tuition fee
             income = 0
-            salary_potential = db.collection("salary_potential").document(i)
+            salary_potential = db.collection("salary_potential").document(i).limit(10)
             salary = salary_potential.get()
             if salary.exists:
                 early_pay_back = salary.to_dict()["early_career_pay"]
