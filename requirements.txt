@@ -5,7 +5,3 @@ flask
 streamlit-aggrid
 matplotlib
 streamlit_plotly_events
-plotly.express
-plotly.graph_objects
-plotly.figure_factory
-matplotlib.pyplot
