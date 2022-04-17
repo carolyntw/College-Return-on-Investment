@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
+from PIL import Image
 
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
@@ -25,7 +26,7 @@ if navi == "Home":
     # st.title("🎓 Diploma PDF Generator")
     with open('choice.txt', 'w') as f:
         f.write('None')
-    st.header('🎓 College Returen on Investment')
+    st.header('🎓 College Return on Investment')
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
              "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
@@ -36,11 +37,12 @@ if navi == "Home":
              "We want to build a website that provides prospective college students an understanding of the finance "
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
+    image = Image.open('college-roi.jpeg')
 
 if navi == "College":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
-    st.header('🎓 College Returen on Investment')
+    st.header('🎓 College Return on Investment')
     st.write("Don't know which university to go to?")
     st.write("Don't know which major is financially prosperous?")
     st.write("We got you! Choose the category you wanna explore further.")
@@ -53,7 +55,7 @@ if navi == "College":
     with left:
         university_button = st.button("Universities")
     with right:
-        major_button = st.button("Majories")
+        major_button = st.button("Majors")
 
     # university_button = st.button("Universities")
     # major_button = st.button("Majories")
