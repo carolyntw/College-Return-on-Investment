@@ -354,25 +354,25 @@ if navi == "Loan Repayment Calculator":
 if navi == "Contact Us":
     with open('choice.txt', 'w') as f:
         f.write('None')
-    st.header('📝 Feedback')
-    st.write("Our Email: jennyyan54@gmail.com")
-    st.subheader("Send Us Your Feedback")
+    st.header('Contact Us')
+#    st.write("Our Email: jennyyan54@gmail.com")
+#    st.subheader("Send Us Your Feedback")
     form = st.form(key="feedback", clear_on_submit=True)
     with form:
         fname = st.text_input("First Name")
         lname = st.text_input("Last Name")
         cols = st.columns(2)
         area = cols[0].text_input("Area Code")
-        tel = cols[1].text_input("Tel.Number")
-        email = st.text_input("Email")
+        tel = cols[1].text_input("Phone Number")
+        email = st.text_input("Email Address")
         cont = st.columns(2)
         contact1 = cont[0].checkbox("May we contact you?")
-        contact2 = cont[1].selectbox("Contact By", ('Tel.', 'Email'))
+        contact2 = cont[1].selectbox("Contact By", ('Phone', 'Email'))
         feedback = st.text_area("Feedback")
         submitted = st.form_submit_button(label="Submit")
 
         if submitted:
-            st.success("Submit Succeed.")
+            st.success("Submit Successfully!")
             doc_ref = db.collection("Feedback").document(f"{fname} {lname}")
             doc_ref.set({
                 "Area Code": area,
