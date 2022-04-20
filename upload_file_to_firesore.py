@@ -21,14 +21,14 @@ file_dict = {"Portfolio-by-Location-by-Age.json": "Location", "Portfolio-by-Loca
             "salaries-by-region.json": "School Name", "student-loan-by-state.json":"state/area",
              "salaries-by-college-type.json": "School Name", "degrees-that-pay-back.json": "Undergraduate Major",
             "salary_potential.json": "name", "tuition_cost.json":"name"}
-# file_dict = {"tuition_cost.json":"name"}
+# file_dict = {"student-loan-by-state.json": "state/area"}
 
 # file_dict = {}
 for filename in os.listdir('data'):
     if filename.endswith('.json'):
         collectionName = filename.split('.')[0] # filename minus ext will be used as collection name
         str = 'data/' + filename
-        f = open(str, 'r',encoding='utf-8-sig')
+        f = open(str, 'r', encoding='utf-8-sig')
         docs = json.loads(f.read())
         for doc in docs:
             id = doc.pop(file_dict[filename], None)

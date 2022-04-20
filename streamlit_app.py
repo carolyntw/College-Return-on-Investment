@@ -154,7 +154,7 @@ if navi == "College":
             loan_by_state = db.collection("student-loan-by-state").document(state)
             loan = loan_by_state.get()
             if loan.exists:
-                loan_2021 = loan.to_dict()["2021 Average"]
+                loan_2021 = int(loan.to_dict()["2021 Average"])
                 data_dict["Debt"] = [loan_2021]
                 debt = loan_2021
             else:
@@ -165,7 +165,7 @@ if navi == "College":
             salary_potential = db.collection("salary_potential").document(i)
             salary = salary_potential.get()
             if salary.exists:
-                early_pay_back = salary.to_dict()["early_career_pay"]
+                early_pay_back = int(salary.to_dict()["early_career_pay"])
                 data_dict["Early Career Pay"] = [early_pay_back]
                 income = early_pay_back
             else:
@@ -175,7 +175,7 @@ if navi == "College":
                 data_dict["Debt-Income Ratio"] = ["No enough data"]
                 all_ratio[i] = 0
             else:
-                ratio1 = int(debt) / int(income)
+                ratio1 = debt / income
                 data_dict["Debt-Income Ratio"] = [ratio1]
                 all_ratio[i] = ratio1
 
@@ -190,30 +190,20 @@ if navi == "College":
             # else:
             #     early_pay_back = salary_potential.to_dict()["early_career_pay"]
 
+
         # st.dataframe(all_college)
-        import altair as alt
-
-        # plot the data
-        # all_college["Debt"]
-        # st.write(all_college["Out Of State Total"][1])
-        # c = alt.Chart(all_college).mark_circle().encode(
-        #     x='Out Of State Total', y='Debt-Income Ratio', size='College', color='c',
-        #     tooltip=['Out Of State Total', 'Debt-Income Ratio', 'College']
-
-        # numpy_tuition = np.array(all_tuition)
-        # numpy_ratio = np.array(all_ratio)
-        # print(all_ratio)
-        # ratios = pd.DataFrame.from_dict(all_ratio, orient="index")
-        #
-        # st.bar_chart(ratios, height=380)
-
+        usa_debt = int(db.collection("student-loan-by-state").document("United States").get().to_dict()["2021 Average"])
+        usa_income = int(db.collection("student-loan-by-state").document("United States").get().to_dict()["2021 Salary"])
+        all_ratio["USA Average"] = usa_debt/usa_income
+        # use bar_chart
+        ratios = pd.DataFrame.from_dict(all_ratio, orient="index")
+        st.bar_chart(ratios, height=380)
 
         # use altair_chart
         ratio_items = all_ratio.items()
         ratio_list = list(ratio_items)
-        ratio_df = pd.DataFrame(ratio_list)
-        df = pd.DataFrame(ratio_df, columns=["College", "ratio"])
-        c = alt.Chart(df).mark_bar().encode(x='College', y='ratio', color='College')
+        ratio_df = pd.DataFrame(ratio_list, columns=["College", "ratio"])
+        c = alt.Chart(ratio_df).mark_bar().encode(x='College', y='ratio', color =alt.value('orange'))
 
         st.altair_chart(c, use_container_width=True)
 
