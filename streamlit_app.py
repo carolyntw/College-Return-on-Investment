@@ -9,6 +9,7 @@ import numpy as np
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 from PIL import Image
+import altair as alt
 
 import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
@@ -153,7 +154,7 @@ if navi == "College":
             loan_by_state = db.collection("student-loan-by-state").document(state)
             loan = loan_by_state.get()
             if loan.exists:
-                loan_2021 = loan.to_dict()["2021"]
+                loan_2021 = loan.to_dict()["2021 Average"]
                 data_dict["Debt"] = [loan_2021]
                 debt = loan_2021
             else:
@@ -201,24 +202,20 @@ if navi == "College":
 
         # numpy_tuition = np.array(all_tuition)
         # numpy_ratio = np.array(all_ratio)
-        ratios = pd.DataFrame.from_dict(all_ratio, orient="index")
-        # plt.figure(figsize=(1, 1))
-        # width = st.sidebar.slider("plot width", 0.1, 25., 3.)
-        # height = st.sidebar.slider("plot height", 0.1, 25., 1.)
+        # print(all_ratio)
+        # ratios = pd.DataFrame.from_dict(all_ratio, orient="index")
+        #
+        # st.bar_chart(ratios, height=380)
 
-        # fig, ax = plt.subplots(figsize=(3, 1.5))
-        # # fig, ax = plt.subplots(figsize=(1, 1))
-        # ax.scatter(numpy_tuition, numpy_ratio, marker='o')
-        # # ax.legend(loc='upper center', shadow=True, fontsize='x-large')
 
-        # st.pyplot(fig)
+        # use altair_chart
+        ratio_items = all_ratio.items()
+        ratio_list = list(ratio_items)
+        ratio_df = pd.DataFrame(ratio_list)
+        df = pd.DataFrame(ratio_df, columns=["College", "ratio"])
+        c = alt.Chart(df).mark_bar().encode(x='College', y='ratio', color='College')
 
-        # arr = np.random.normal(1, 1, size=100)
-        # fig, ax = plt.subplots()
-        # ax.hist(all_ratio, bins=20)
-
-        st.bar_chart(ratios, height=380)
-
+        st.altair_chart(c, use_container_width=True)
 
         # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
         def aggrid_interactive_table(df: pd.DataFrame):
