@@ -223,10 +223,8 @@ if navi == "College":
         # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
         def aggrid_interactive_table(df: pd.DataFrame):
             """Creates an st-aggrid interactive table based on a dataframe.
-
             Args:
                 df (pd.DataFrame]): Source dataframe
-
             Returns:
                 dict: The selected row
             """
@@ -289,7 +287,7 @@ if navi == "College":
                 width = 0.25
                 fig = plt.figure(figsize=(24, 6))
                 plt.rcParams['font.size'] = '14'
-                plt.bar(r, x1_rowValue, color='mistyrose', width=width, edgecolor='black', label='Major1')
+                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
                 plt.xticks(r + width / 4, x1_columnName)
                 plt.legend(prop={"size": 18})
                 st.pyplot(fig)
@@ -304,8 +302,8 @@ if navi == "College":
                 width = 0.25
                 fig = plt.figure(figsize=(24, 6))
                 plt.rcParams['font.size'] = '14'
-                plt.bar(r, x1_rowValue, color='mistyrose', width=width, edgecolor='black', label='Major1')
-                plt.bar(r + 0.25, x2_rowValue, color='coral', width=width, edgecolor='black', label='Major2')
+                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
+                plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
                 plt.xticks(r + width / 3, x1_columnName)
                 plt.legend(prop={"size": 18})
                 st.pyplot(fig)
@@ -321,9 +319,9 @@ if navi == "College":
                 width = 0.25
                 fig = plt.figure(figsize=(24, 6))
                 plt.rcParams['font.size'] = '14'
-                plt.bar(r, x1_rowValue, color='mistyrose', width=width, edgecolor='black', label='Major1')
-                plt.bar(r + 0.25, x2_rowValue, color='coral', width=width, edgecolor='black', label='Major2')
-                plt.bar(r + 0.5, x3_rowValue, color='orangered', width=width, edgecolor='black', label='Major3')
+                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
+                plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
+                plt.bar(r+0.5,x3_rowValue,color = 'orangered',width = width,edgecolor = 'black',label = all_major.at[2,'Undergraduate Major'])
                 plt.xticks(r + width, x1_columnName)
                 plt.legend(prop={"size": 18})
                 st.pyplot(fig)
