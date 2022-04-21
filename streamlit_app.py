@@ -40,6 +40,7 @@ if navi == "Home Page":
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
+    st.image(image)
 
 if navi == "Colleges/Majors":
     # Create a reference to the Google post.
