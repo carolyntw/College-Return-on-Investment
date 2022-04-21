@@ -319,9 +319,9 @@ if navi == "Loan Repayment Calculator":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Loan Repayment Calculator')
-    st.markdown("**_Finding out approximately how much time and money for loan debt repaynment can be challenging, but we are here to help!_**"
-    st.markdown("**_Input your information and we will help you "
-                "calculate how much time it would take for you to pay off your loan debt as well as the total money including interest you would pay over the time!_**")
+    st.text("Finding out approximately how much time and money for loan debt repaynment can be challenging, but we are here to help!"
+    st.text("Input your information and we will help you "
+                "calculate how much time it would take for you to pay off your loan debt as well as the total money including interest you would pay over the time!")
     total_loan = st.number_input('The amount of loan taken: ')
     monthly_pay = st.number_input('Estimated monthly payment: ')
     annual_interest = st.number_input('Estimated annual interest (%): ')
@@ -348,8 +348,8 @@ if navi == "Contact Us":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Contact Us')
-    st.markdown("**_We appricate you for trying out our webpage and we would love to hear your thoughts on what you love and/or any improvements we can make!_**")
-    st.markdown("**_Submit the form below and we will take a look at it as soon as possible!_**")
+    st.text("We appricate you for trying out our webpage and we would love to hear your thoughts on what you love and/or any improvements we can make!")
+    st.text("Submit the form below and we will take a look at it as soon as possible!")
 #    st.write("Our Email: jennyyan54@gmail.com")
 #    st.subheader("Send Us Your Feedback")
     form = st.form(key="feedback", clear_on_submit=True)
