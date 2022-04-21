@@ -347,8 +347,8 @@ if navi == "Contact Us":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Contact Us')
-    st.write("We appricate you for trying out our webpage and we would love to hear your thoughts on what you love about our webpage and/or any improvements we can make!"
-             "Submit the form below and we will take a look as soon as possible!")
+    st.write("We appricate you for trying out our webpage and we would love to hear your thoughts on what you love and/or any improvements we can make!")
+    st.write("Submit the form below and we will take a look at it as soon as possible!"/n)
 #    st.write("Our Email: jennyyan54@gmail.com")
 #    st.subheader("Send Us Your Feedback")
     form = st.form(key="feedback", clear_on_submit=True)
