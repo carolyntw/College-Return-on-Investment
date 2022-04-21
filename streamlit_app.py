@@ -20,15 +20,19 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-navi = st.sidebar.radio("Navigation", ["Home Page", "Colleges/Majors", "Loan Repayment Calculator", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["UNIROI Home Page", "Colleges/Majors Search", "Loan Repayment Calculator", "Contact Us"])
 
 if navi == "Home Page":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
     # st.title("🎓 Diploma PDF Generator")
     with open('choice.txt', 'w') as f:
         f.write('None')
-    st.header('Home Page')
-    st.subheader("The motivation behind this webpage's idea:")
+    st.header('UNIROI Home Page')
+    st.subheader("What is UNIROI?")
+    image1 = Image.open('UNIROI.png')
+    st.image(image1)
+    st.write("UNI")
+    st.subheader("The motivation behind UNIROI:")
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
              "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
@@ -40,12 +44,12 @@ if navi == "Home Page":
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
-    st.image(image)
+    st.image(image, width=1, use_column_width=1)
 
 if navi == "Colleges/Majors":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
-    st.header('Colleges/Majors')
+    st.header('Colleges/Majors Search')
     st.write("Don't know which university to go to?")
     st.write("Don't know which major is financially prosperous?")
     st.write("We got you! Choose the category you wanna explore further.")
