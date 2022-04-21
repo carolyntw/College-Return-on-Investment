@@ -378,3 +378,5 @@ if navi == "Contact Us":
                 "Contact By": contact2,
                 "Feedback": feedback
             })
+    image1 = Image.open('UNIROI.png')
+    st.image(image1)
