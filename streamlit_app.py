@@ -319,9 +319,9 @@ if navi == "Loan Repayment Calculator":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Loan Repayment Calculator')
-    st.markdown("Finding out approximately how much time and money for loan debt repaynment can be challenging, but we are here to help!"
-    st.markdown("**Input your information and we will help you "
-                "calculate how much time it would take for you to pay off your loan debt as well as the total money including interest you would pay over the time!**")
+    st.markdown("**_Finding out approximately how much time and money for loan debt repaynment can be challenging, but we are here to help!_**"
+    st.markdown("_Input your information and we will help you "
+                "calculate how much time it would take for you to pay off your loan debt as well as the total money including interest you would pay over the time!_")
     total_loan = st.number_input('The amount of loan taken: ')
     monthly_pay = st.number_input('Estimated monthly payment: ')
     annual_interest = st.number_input('Estimated annual interest (%): ')
