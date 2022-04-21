@@ -20,7 +20,7 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-navi = st.sidebar.radio("Navigation", ["UNIROI Home Page", "Colleges/Majors Search", "Loan Repayment Calculator", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["UNIROI Home Page", "University/Major Search", "Loan Repayment Calculator", "Contact Us"])
 
 if navi == "UNIROI Home Page":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
@@ -36,7 +36,7 @@ if navi == "UNIROI Home Page":
              "in another terms, whether your decision is worth it in terms of financial investment.")
     st.subheader("How to use UNIROI?")
     st.write("Two main uses of UNIROI are:" )
-    st.write("- Searching for colleges/majors for finances information, which can be further explored by clicking 'Colleges/Majors Search' on the navigation bar.")
+    st.write("- Searching for colleges/majors for finances information, which can be further explored by clicking 'University/Major Search' on the navigation bar.")
     st.write("- Calculate the total time and money for repaying loan debt, which can be further explored by clicking 'Loan Repayment Calculator' on the navigation bar.")
     st.subheader("What is the motivation behind UNIROI?")
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
@@ -53,10 +53,10 @@ if navi == "UNIROI Home Page":
     st.image(image)
     st.write("This webpage platform were built by Duyen Nguyen, Kaiyin Chan and Jieni Yan.")
 
-if navi == "Colleges/Majors Search":
+if navi == "University/Major Search":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
-    st.header('Colleges/Majors Search')
+    st.header('University/Major Search')
     st.write("Spending your time, money, and effort in pursuing a college degree is a huge commitment, especially in terms of financial investment.")
     st.write("It is important to have a proper understanding"
              "about this return on investment, whether the college tuition is within your affordability range, how much recent grad from certain colleges would make, and "
