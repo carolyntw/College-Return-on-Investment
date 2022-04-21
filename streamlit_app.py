@@ -73,11 +73,6 @@ if navi == "University/Major Search":
     with right:
         major_button = st.button("Major")
 
-    # university_button = st.button("Universities")
-    # major_button = st.button("Majories")
-    # st.write(university_button)
-    # st.write(major_button)
-
     if university_button == False and major_button == False and choice[0] == 'university':
         university_button = True
         # major_button = False
@@ -92,60 +87,17 @@ if navi == "University/Major Search":
         with open('choice.txt', 'w') as f:
             f.write('major')
 
-    # st.write(university_button)
-    # st.write(major_button)
-
     if university_button:
-
-        # df = pd.read_json('data/tuition_cost.json')
-        # df2 = pd.read_json('data/degrees-that-pay-back.json')
-
-        # state = df['state'].unique()
-
         colleges = db.collection("tuition_cost")
         colleges_stream = colleges.stream()
-        # state_code = []
-        # for college in colleges_stream:
-        #     state_c = college.to_dict()["state"]
-        #     if state_c not in state_code:
-        #         state_code.append(state_c)
-
-        # state_choice = st.multiselect('Select your state:', state_code)
-        # university_list = []
-        # for i in state_choice:
-        #     # university = df['name'].loc[df['state'] == i].unique()
-        #     universities = colleges.where(u'state', u'==', i).stream()
-        #     # st.write(universities)
-        #     for university in universities:
-        #         university_name = university.id
-        #         # st.write(university_name)
-        #         university_list.append(university_name)
-        #     # for n in university:
-        #     #     university_list.append(n)
         university_list = []
         for college in colleges_stream:
             university = college.id
             university_list.append(university)
-            # if state_c not in state_code:
-            #     state_code.append(state_c)
-        # s_dict = pd.read_json('data/salary_potential.json')
-        # t_dict = pd.read_json('data/tuition_cost.json')
-        # merge = pd.merge(s_dict, t_dict, on="name")
-        # final_university = merge['name']
-        # salaries = db.collection("salary_potential").stream()
-        # st.write(len(salaries))
 
-        # final_university = []
-        # for salary in salaries:
-        #     if salary.id in university_list:
-        #         university_list.append(salary.id)
-        # print()
         university_choice = st.multiselect('Select your interested universities:', university_list)
-        # university_choice2 = st.select('Select your university:', university_list)
-        # university_choice3 = st.select('Select your university:', university_list)
 
         data_dict = {}
-        # column = ["College", "In State Total", "Out Of State Total", "Debt", "Early Career Pay", "Debt-Income Ratio"]
         all_tuition = []
         all_ratio = {}
 
@@ -160,10 +112,7 @@ if navi == "University/Major Search":
             out_tuition = name_doc.to_dict()["out_of_state_total"]
             data_dict["Out Of State Tuition"] = [out_tuition]
             all_tuition.append(out_tuition)
-            # data = pd.DataFrame.from_dict(datas, orient='index', columns=[i]).sort_index()
-            # data = data.transpose()
 
-            # get the debt
             debt = 0
             state = name_doc.to_dict()["state"]
             loan_by_state = db.collection("student-loan-by-state").document(state)
@@ -198,14 +147,6 @@ if navi == "University/Major Search":
 
             all_college = pd.concat([all_college, one_college], ignore_index=True)
 
-            # salary_potential = db.collection("salary_potential").document(i)
-            # salary = doc_ref.get()
-            # if salary.exists:
-            #
-            # else:
-            #     early_pay_back = salary_potential.to_dict()["early_career_pay"]
-
-
         # st.dataframe(all_college)
         usa_debt = int(db.collection("student-loan-by-state").document("United States").get().to_dict()["2021 Average"])
         usa_income = int(db.collection("student-loan-by-state").document("United States").get().to_dict()["2021 Salary"])
@@ -213,14 +154,6 @@ if navi == "University/Major Search":
         # use bar_chart
         ratios = pd.DataFrame.from_dict(all_ratio, orient="index")
         st.bar_chart(ratios, height=380)
-
-        # use altair_chart
-        ratio_items = all_ratio.items()
-        ratio_list = list(ratio_items)
-        ratio_df = pd.DataFrame(ratio_list, columns=["College", "ratio"])
-        c = alt.Chart(ratio_df).mark_bar().encode(x='College', y='ratio', color =alt.value('orange'))
-
-        st.altair_chart(c, use_container_width=True)
 
         # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
         def aggrid_interactive_table(df: pd.DataFrame):
@@ -320,6 +253,7 @@ if navi == "University/Major Search":
                 r = np.arange(n)
                 width = 0.25
                 fig = plt.figure(figsize=(24, 6))
+                plt.ylim(-2, 2)
                 plt.rcParams['font.size'] = '14'
                 plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
                 plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
