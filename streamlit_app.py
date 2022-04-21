@@ -27,9 +27,9 @@ if navi == "Home":
     # st.title("🎓 Diploma PDF Generator")
     with open('choice.txt', 'w') as f:
         f.write('None')
-    st.header('Home')
+    st.header('Home Page')
     st.subheader("The motivation behind this webpage's idea:")
-    st.text("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
+    st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
              "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
              "don’t have the privilege of having family members or someone they know that had such experiences to help "
@@ -41,7 +41,7 @@ if navi == "Home":
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
 
-if navi == "College":
+if navi == "Colleges/Majors":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
     
@@ -319,8 +319,10 @@ if navi == "Loan Repayment Calculator":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Loan Repayment Calculator')
-    total_loan = st.number_input('The amount of loan: ')
-    monthly_pay = st.number_input('Monthly payment: ')
+    st.write("Finding out approximately how much time and money to ... can be challenging, but we are here to help. Input your information and we will help you "
+             "calculate how much time it would take for you to pay off your loan debt as well as the total money including interest you would pay over the time! ")
+    total_loan = st.number_input('The amount of loan taken: ')
+    monthly_pay = st.number_input('Estimated monthly payment: ')
     annual_interest = st.number_input('Estimated annual interest (%): ')
 
     monthly_interest = annual_interest / 100 / 12
@@ -334,9 +336,9 @@ if navi == "Loan Repayment Calculator":
             interest = monthly_balance * monthly_interest
 
             if monthly_balance < monthly_pay:
-                st.write('Time to pay off loan debt:', i + 1, 'month(s) or', '{:.2f}'.format((i + 1) / 12, 2),
-                         'year(s).')
-                st.write('The total balance paid: $',
+                st.write('It would take you approximately ', i + 1, 'month(s) or', '{:.2f}'.format((i + 1) / 12, 2),
+                         'year(s) to pay off loan debt.')
+                st.write('Total balance you would pay: $',
                          "{:.2f}".format(round(monthly_pay * i + monthly_balance + interest, 2)))
                 break
             i += 1
@@ -345,6 +347,8 @@ if navi == "Contact Us":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Contact Us')
+    st.write("We appricate you for trying out our webpage and we would love to hear your thoughts on what you love about our webpage and/or any improvements we can make!"
+             "Submit the form below and we will take a look as soon as possible!")
 #    st.write("Our Email: jennyyan54@gmail.com")
 #    st.subheader("Send Us Your Feedback")
     form = st.form(key="feedback", clear_on_submit=True)
