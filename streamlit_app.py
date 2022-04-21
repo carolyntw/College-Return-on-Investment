@@ -141,9 +141,9 @@ if navi == "College":
 
             data_dict["College"] = [name_doc.id]
             in_tuition = name_doc.to_dict()["in_state_total"]
-            data_dict["In State Total"] = [in_tuition]
+            data_dict["In State Tuition"] = [in_tuition]
             out_tuition = name_doc.to_dict()["out_of_state_total"]
-            data_dict["Out Of State Total"] = [out_tuition]
+            data_dict["Out Of State Tuition"] = [out_tuition]
             all_tuition.append(out_tuition)
             # data = pd.DataFrame.from_dict(datas, orient='index', columns=[i]).sort_index()
             # data = data.transpose()
