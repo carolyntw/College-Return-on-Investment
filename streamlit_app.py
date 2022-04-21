@@ -44,7 +44,7 @@ if navi == "UNIROI Home Page":
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
-    st.image(image, width=1in, use_column_width=1in)
+    st.image(image, width=0.1, use_column_width=.1)
 
 if navi == "Colleges/Majors Search":
     # Create a reference to the Google post.
