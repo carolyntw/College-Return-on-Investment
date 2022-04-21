@@ -57,9 +57,9 @@ if navi == "Colleges/Majors Search":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
     st.header('Colleges/Majors Search')
-    st.write("Spending your time, money, and effort in pursuing a college degree is a huge investment and commitment.")
+    st.write("Spending your time, money, and effort in pursuing a college degree is a huge commitment, especially in terms of financial investment.")
     st.write("It is important to have a proper understanding"
-             "about this financial investment, whether the college tuition is within your affordability range, how much recent grad from certain colleges would make, and "
+             "about this return on investment, whether the college tuition is within your affordability range, how much recent grad from certain colleges would make, and "
              "whether your interested major is financially prosperous.")
     st.write("Choose one category below to explore further.")
 
