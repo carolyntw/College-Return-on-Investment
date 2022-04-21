@@ -22,7 +22,7 @@ db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
 navi = st.sidebar.radio("Navigation", ["UNIROI Home Page", "Colleges/Majors Search", "Loan Repayment Calculator", "Contact Us"])
 
-if navi == "Home Page":
+if navi == "UNIROI Home Page":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
     # st.title("🎓 Diploma PDF Generator")
     with open('choice.txt', 'w') as f:
@@ -46,7 +46,7 @@ if navi == "Home Page":
     image = Image.open('college-roi.jpeg')
     st.image(image, width=1, use_column_width=1)
 
-if navi == "Colleges/Majors":
+if navi == "Colleges/Majors Search":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
     st.header('Colleges/Majors Search')
