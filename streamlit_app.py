@@ -20,7 +20,7 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-navi = st.sidebar.radio("Navigation", ["Home", "College", "Loan Repayment Calculator", "Contact Us"])
+navi = st.sidebar.radio("Navigation", ["Home Page", "Colleges/Majors", "Loan Repayment Calculator", "Contact Us"])
 
 if navi == "Home Page":
     # st.set_page_config(layout="centered", page_icon="🎓", page_title="Diploma Generator")
@@ -45,7 +45,6 @@ if navi == "Home Page":
 if navi == "Colleges/Majors":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
-    
     st.header('Colleges/Majors')
     st.write("Don't know which university to go to?")
     st.write("Don't know which major is financially prosperous?")
