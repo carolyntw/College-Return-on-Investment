@@ -27,8 +27,9 @@ if navi == "Home":
     # st.title("🎓 Diploma PDF Generator")
     with open('choice.txt', 'w') as f:
         f.write('None')
-    st.header('🎓 College Return on Investment')
-    st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
+    st.header('Home')
+    st.subheader("The motivation behind this webpage's idea:")
+    st.text("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
              "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
              "don’t have the privilege of having family members or someone they know that had such experiences to help "
@@ -43,7 +44,8 @@ if navi == "Home":
 if navi == "College":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
-    st.header('🎓 College Return on Investment')
+    
+    st.header('Colleges/Majors')
     st.write("Don't know which university to go to?")
     st.write("Don't know which major is financially prosperous?")
     st.write("We got you! Choose the category you wanna explore further.")
@@ -316,6 +318,7 @@ if navi == "College":
 if navi == "Loan Repayment Calculator":
     with open('choice.txt', 'w') as f:
         f.write('None')
+    st.header('Loan Repayment Calculator')
     total_loan = st.number_input('The amount of loan: ')
     monthly_pay = st.number_input('Monthly payment: ')
     annual_interest = st.number_input('Estimated annual interest (%): ')
