@@ -27,12 +27,18 @@ if navi == "UNIROI Home Page":
     # st.title("🎓 Diploma PDF Generator")
     with open('choice.txt', 'w') as f:
         f.write('None')
-    st.header('UNIROI Home Page')
-    st.subheader("What is UNIROI?")
+    st.header('Welcome to UNIROI!')
     image1 = Image.open('UNIROI.png')
     st.image(image1)
-    st.write("UNI")
-    st.subheader("The motivation behind UNIROI:")
+    st.subheader("What is UNIROI?")
+    st.write("UNIROI is a webpage platform where you can search for your interested colleges and/or majors to see the financial aspect around them. "
+             "The main purpose of this platform is to provide financial information that could help you make decision on which college to go and/or which major to pursue, "
+             "in another terms, whether your decision is worth it in terms of financial investment.")
+    st.subheader("How to use UNIROI?")
+    st.write("Two main uses of UNIROI are:" )
+    st.write("- Searching for colleges/majors for finances info, which can be further explored by clicking 'Colleges/Majors Search' on the navigation bar.")
+    st.write("- Calculate the total time and money for repaying loan debt, whichwhich can be further explored by clicking 'Loan Repayment Calculator' on the navigation bar.")
+    st.subheader("What is the motivation behind UNIROI?")
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
              "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
@@ -45,6 +51,7 @@ if navi == "UNIROI Home Page":
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
     st.image(image, width=0.1, use_column_width=.1)
+    st.write("This platform were built by Duyen Nguyen, Kaiyin Chan and Jieni Yan.")
 
 if navi == "Colleges/Majors Search":
     # Create a reference to the Google post.
