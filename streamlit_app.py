@@ -50,7 +50,7 @@ if navi == "UNIROI Home Page":
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
-    st.image(image, width=0.1, use_column_width=.1)
+    st.image(image)
     st.write("This platform were built by Duyen Nguyen, Kaiyin Chan and Jieni Yan.")
 
 if navi == "Colleges/Majors Search":
