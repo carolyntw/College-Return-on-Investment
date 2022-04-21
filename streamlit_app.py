@@ -32,12 +32,12 @@ if navi == "UNIROI Home Page":
     st.image(image1)
     st.subheader("What is UNIROI?")
     st.write("UNIROI is a webpage platform where you can search for your interested colleges and/or majors to see the financial aspect around them. "
-             "The main purpose of this platform is to provide financial information that could help you make decision on which college to go and/or which major to pursue, "
+             "The main purpose of this platform is to provide financial information that could help you make decision on which college to go to and/or which major to pursue, "
              "in another terms, whether your decision is worth it in terms of financial investment.")
     st.subheader("How to use UNIROI?")
     st.write("Two main uses of UNIROI are:" )
-    st.write("- Searching for colleges/majors for finances info, which can be further explored by clicking 'Colleges/Majors Search' on the navigation bar.")
-    st.write("- Calculate the total time and money for repaying loan debt, whichwhich can be further explored by clicking 'Loan Repayment Calculator' on the navigation bar.")
+    st.write("- Searching for colleges/majors for finances information, which can be further explored by clicking 'Colleges/Majors Search' on the navigation bar.")
+    st.write("- Calculate the total time and money for repaying loan debt, which can be further explored by clicking 'Loan Repayment Calculator' on the navigation bar.")
     st.subheader("What is the motivation behind UNIROI?")
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
@@ -51,15 +51,16 @@ if navi == "UNIROI Home Page":
              "and underrepresented minorities who don’t have much resources around them.")
     image = Image.open('college-roi.jpeg')
     st.image(image)
-    st.write("This platform were built by Duyen Nguyen, Kaiyin Chan and Jieni Yan.")
+    st.write("This webpage platform were built by Duyen Nguyen, Kaiyin Chan and Jieni Yan.")
 
 if navi == "Colleges/Majors Search":
     # Create a reference to the Google post.
     # Create dataframe of the university names, state codes
     st.header('Colleges/Majors Search')
-    st.write("Don't know which university to go to?")
-    st.write("Don't know which major is financially prosperous?")
-    st.write("We got you! Choose the category you wanna explore further.")
+    st.write("Spending your time, money, and effort in pursuing a college degree is a huge investment and commitment. It is important to have a proper understanding"
+             "about this financial investment, whether the college tuition is within your affordability range, how much recent grad from certain colleges would make, and "
+             "whether your interested major is financially prosperous.")
+    st.write("Choose one category below to explore further.")
 
     choice = ''
     with open('choice.txt') as f:
@@ -67,9 +68,9 @@ if navi == "Colleges/Majors Search":
 
     left, right = st.columns(2)
     with left:
-        university_button = st.button("Universities")
+        university_button = st.button("University")
     with right:
-        major_button = st.button("Majors")
+        major_button = st.button("Major")
 
     # university_button = st.button("Universities")
     # major_button = st.button("Majories")
@@ -138,7 +139,7 @@ if navi == "Colleges/Majors Search":
         #     if salary.id in university_list:
         #         university_list.append(salary.id)
         # print()
-        university_choice = st.multiselect('Select your university:', university_list)
+        university_choice = st.multiselect('Select your interested universities:', university_list)
         # university_choice2 = st.select('Select your university:', university_list)
         # university_choice3 = st.select('Select your university:', university_list)
 
@@ -263,7 +264,7 @@ if navi == "Colleges/Majors Search":
         del m_dict["Mid-Career Median Salary"]
         m_data = pd.DataFrame(m_dict)
 
-        majors_choice = st.multiselect('Select your major (At most three):', m_dict)
+        majors_choice = st.multiselect('Select your interested majors (at most 3):', m_dict)
         major_dict = {}
         all_major = pd.DataFrame()
         for i in majors_choice:
@@ -359,7 +360,7 @@ if navi == "Contact Us":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Contact Us')
-    st.write("We appricate you for trying out our webpage and we would love to hear your thoughts on what you love and/or any improvements we can make!")
+    st.write("We appricate you for trying out UNIROI and we would love to hear your thoughts on what you love and/or any improvements we can make!")
     st.write("Submit the form below and we will take a look at it as soon as possible!")
 #    st.write("Our Email: jennyyan54@gmail.com")
 #    st.subheader("Send Us Your Feedback")
@@ -388,5 +389,3 @@ if navi == "Contact Us":
                 "Contact By": contact2,
                 "Feedback": feedback
             })
-    image1 = Image.open('UNIROI.png')
-    st.image(image1)
