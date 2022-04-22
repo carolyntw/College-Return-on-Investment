@@ -217,12 +217,13 @@ if navi == "University/Major Search":
 
                 x1_columnName = plot.columns.values.tolist()
                 x1_rowValue = plot.loc[0, :].values.tolist()
+                x1_rowValue = np.array(x1_rowValue,dtype=float)
                 n = 5
                 r = np.arange(n)
                 width = 0.25
-                fig = plt.figure(figsize=(24, 6))
+                fig = plt.figure(figsize=(34, 18))
                 plt.rcParams['font.size'] = '14'
-                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
+                plt.bar(r,x1_rowValue/100,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
                 plt.xticks(r + width / 4, x1_columnName)
                 plt.legend(prop={"size": 18})
                 st.pyplot(fig)
@@ -230,15 +231,17 @@ if navi == "University/Major Search":
             elif len(final_m_data) == 2:
                 x1_columnName = plot.columns.values.tolist()
                 x1_rowValue = plot.loc[0, :].values.tolist()
+                x1_rowValue = np.array(x1_rowValue,dtype=float)
                 x2_rowValue = plot.loc[1, :].values.tolist()
+                x2_rowValue = np.array(x2_rowValue,dtype=float)
 
                 n = 5
                 r = np.arange(n)
                 width = 0.25
-                fig = plt.figure(figsize=(24, 6))
+                fig = plt.figure(figsize=(34, 18))
                 plt.rcParams['font.size'] = '14'
-                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
-                plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
+                plt.bar(r,x1_rowValue/100,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
+                plt.bar(r+0.25,x2_rowValue/100,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
                 plt.xticks(r + width / 3, x1_columnName)
                 plt.legend(prop={"size": 18})
                 st.pyplot(fig)
@@ -246,18 +249,20 @@ if navi == "University/Major Search":
             elif len(final_m_data) == 3:
                 x1_columnName = plot.columns.values.tolist()
                 x1_rowValue = plot.loc[0, :].values.tolist()
+                x1_rowValue = np.array(x1_rowValue,dtype=float)
                 x2_rowValue = plot.loc[1, :].values.tolist()
+                x2_rowValue = np.array(x2_rowValue,dtype=float)
                 x3_rowValue = plot.loc[2, :].values.tolist()
+                x3_rowValue = np.array(x3_rowValue,dtype=float)
 
                 n = 5
                 r = np.arange(n)
                 width = 0.25
-                fig = plt.figure(figsize=(24, 6))
-                plt.ylim(-2, 2)
+                fig = plt.figure(figsize=(34, 18))
                 plt.rcParams['font.size'] = '14'
-                plt.bar(r,x1_rowValue,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
-                plt.bar(r+0.25,x2_rowValue,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
-                plt.bar(r+0.5,x3_rowValue,color = 'orangered',width = width,edgecolor = 'black',label = all_major.at[2,'Undergraduate Major'])
+                plt.bar(r,x1_rowValue/100,color = 'mistyrose',width = width, edgecolor = 'black',label = all_major.at[0,'Undergraduate Major'])
+                plt.bar(r+0.25,x2_rowValue/100,color = 'coral',width = width,edgecolor = 'black',label = all_major.at[1,'Undergraduate Major'])
+                plt.bar(r+0.5,x3_rowValue/100,color = 'orangered',width = width,edgecolor = 'black',label = all_major.at[2,'Undergraduate Major'])
                 plt.xticks(r + width, x1_columnName)
                 plt.legend(prop={"size": 18})
                 st.pyplot(fig)
