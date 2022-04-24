@@ -190,24 +190,35 @@ if navi == "University/Major Search":
         majors = db.collection("degrees-that-pay-back")
         majors_stream = majors.stream()
         majors_list = []
-        for majors in majors_stream:
-            major = majors.id
+        for mj in majors_stream:
+            major = mj.id
             majors_list.append(major)
-        m_dict = pd.read_json('data/degrees-that-pay-back.json')
-        del m_dict["Percent change from Starting to Mid-Career Salary"]
-        del m_dict["Mid-Career Median Salary"]
-        m_data = pd.DataFrame(m_dict)
 
-        majors_choice = st.multiselect('Select your interested majors (at most 3):', m_dict)
+        m_dict = {"Undergraduate Major":[], "Starting Median Salary":[], "Mid-Career 10th Percentile Salary":[],
+                  "Mid-Career 25th Percentile Salary":[], "Mid-Career 75th Percentile Salary":[],
+                  "Mid-Career 90th Percentile Salary":[]}
+
+        majors_choice = st.multiselect('Select your interested majors (at most 3):', majors_list)
         major_dict = {}
         all_major = pd.DataFrame()
         for i in majors_choice:
-            major_doc_ref = db.collection('degrees-that-pay-back').document(i)
+            major_doc_ref = majors.document(i)
             major_doc = major_doc_ref.get()
+
+            major_content = major_doc.to_dict()
+            m_dict["Undergraduate Major"].append(major_doc.id)
+            m_dict["Starting Median Salary"].append(major_content["Starting Median Salary"])
+            m_dict["Mid-Career 10th Percentile Salary"].append(major_content["Mid-Career 10th Percentile Salary"])
+            m_dict["Mid-Career 25th Percentile Salary"].append(major_content["Mid-Career 25th Percentile Salary"])
+            m_dict["Mid-Career 75th Percentile Salary"].append(major_content["Mid-Career 75th Percentile Salary"])
+            m_dict["Mid-Career 90th Percentile Salary"].append(major_content["Mid-Career 90th Percentile Salary"])
+            m_data = pd.DataFrame.from_dict(m_dict)
+            print(m_data)
             major_dict["Undergraduate Major"] = [major_doc.id]
 
             one_major = pd.DataFrame(major_dict)
             all_major = pd.concat([all_major, one_major], ignore_index=True)
+
         if len(all_major) > 0:
             final_m_data = all_major.merge(m_data, on="Undergraduate Major")
 
