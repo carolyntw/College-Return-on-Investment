@@ -41,12 +41,13 @@ if navi == "UNIROI Home Page":
     st.subheader("What is the motivation behind UNIROI?")
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
              " There are a lot of factors such as passion, strength, personality, tuition fee, debt after graduation, "
-             "etc,... to take into account when choosing a major and which college to go to. Many prospective students "
-             "don’t have the privilege of having family members or someone they know that had such experiences to help "
+             "etc,... to take into account when choosing a major and which college to go to.")
+    st.write("Many prospective students don’t have the privilege of having family members or someone they know that had such experiences to help "
              "guide them. These students often fall into the groups of first generation college students and "
-             "underrepresented minorities. Additionally, American college graduates have an average of $30000 loan debt. "
-             "Some graduates may end up being in more debt due to the college they pick and/or the major they choose. "
-             "We want to build a website that provides prospective college students an understanding of the finance "
+             "underrepresented minorities.")
+    st.write("Additionally, American college graduates have an average of $30000 loan debt. "
+             "Some graduates may end up being in more debt due to the college they pick and/or the major they choose.")
+    st.write("We want to build a website that provides prospective college students an understanding of the finance "
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
     st.write("-------------------------------------------------------------------------------------------------------")
