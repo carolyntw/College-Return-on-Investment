@@ -29,7 +29,9 @@ if navi == "UNIROI Home Page":
         f.write('None')
     
     image1 = Image.open('UNIROI.png')
-    st.header('Welcome to UNIROI!') st.image(image1)
+    st.image(image1)
+
+    st.header('Welcome to UNIROI!') 
     
     st.subheader("What is UNIROI?")
     st.write("UNIROI is a webpage platform where you can search for your interested colleges and/or majors to see the financial aspect around them. "
