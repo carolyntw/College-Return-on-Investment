@@ -28,7 +28,6 @@ if navi == "UNIROI Home Page":
     with open('choice.txt', 'w') as f:
         f.write('None')
     
-    st.header('Welcome to UNIROI!') 
     image = Image.open('UNIROI.png')
     st.image(image)
 
