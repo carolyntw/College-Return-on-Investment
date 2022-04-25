@@ -159,7 +159,7 @@ if navi == "University/Major Search":
         all_ratio["USA Average"] = usa_debt/usa_income
         # use bar_chart
         ratios = pd.DataFrame.from_dict(all_ratio, orient="index")
-        st.bar_chart(ratios, height=380)
+
 
         # function source: https://share.streamlit.io/streamlit/example-app-interactive-table/main
         def aggrid_interactive_table(df: pd.DataFrame):
@@ -189,6 +189,11 @@ if navi == "University/Major Search":
 
 
         selection = aggrid_interactive_table(df=all_college)
+        # st.header("\n")
+        st.markdown("<h6 style='text-align: center; color: grey;'>Bar Char For Debt-income Ratio</h6>", unsafe_allow_html=True)
+        # st.caption("Bar Char For Debt-income Ratio")
+        st.bar_chart(ratios, height=380)
+
 
     if major_button:
         # with open('choice.txt', 'w') as f:
