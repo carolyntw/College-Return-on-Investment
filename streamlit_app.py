@@ -192,8 +192,9 @@ if navi == "University/Major Search":
         # st.header("\n")
         st.markdown("<h6 style='text-align: center; color: grey;'>Bar Chart for Debt-Income Ratio</h6>", unsafe_allow_html=True)
         st.bar_chart(ratios, height=380)
-        st.caption("When comparing the ratios from chosen colleges, the higher the ratio, the more likely that college attendee will be in more debt.")
-
+        st.caption("The higher the debt-income ratio from a college, the more likely that college attendee will be in more debt.")
+        st.caption("The ratio less than 1 indicates that the early pay would be more than the student debt.")
+        st.caption("USA average indicates that American college students tend to take out a larger amount of loan than they would probably get paid after graduation.")
 
 
     if major_button:
