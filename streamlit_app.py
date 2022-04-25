@@ -192,7 +192,7 @@ if navi == "University/Major Search":
         # st.header("\n")
         st.markdown("<h6 style='text-align: center; color: grey;'>Bar Chart for Debt-Income Ratio</h6>", unsafe_allow_html=True)
         st.bar_chart(ratios, height=380)
-        st.caption("Bar Chart For Debt-Income Ratio")
+        st.caption("When comparing the ratios from chosen colleges, the higher the ratio, the more likely that college attendee will be in more debt.")
 
 
 
