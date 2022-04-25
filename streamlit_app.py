@@ -190,9 +190,10 @@ if navi == "University/Major Search":
 
         selection = aggrid_interactive_table(df=all_college)
         # st.header("\n")
-        st.markdown("<h6 style='text-align: center; color: grey;'>Bar Char For Debt-income Ratio</h6>", unsafe_allow_html=True)
-        # st.caption("Bar Char For Debt-income Ratio")
+        st.markdown("<h6 style='text-align: center; color: grey;'>Bar Chart for Debt-Income Ratio</h6>", unsafe_allow_html=True)
         st.bar_chart(ratios, height=380)
+        st.caption("Bar Chart For Debt-Income Ratio")
+
 
 
     if major_button:
