@@ -28,22 +28,16 @@ if navi == "UNIROI Home Page":
     with open('choice.txt', 'w') as f:
         f.write('None')
     
-    image1 = Image.open('UNIROI.png')
-    st.image(image1)
-
     st.header('Welcome to UNIROI!') 
-    
+    image = Image.open('UNIROI.png')
+    st.image(image)
+
+   
     st.subheader("What is UNIROI?")
     st.write("UNIROI is a webpage platform where you can search for your interested colleges and/or majors to see the financial aspect around them. "
              "The main purpose of this platform is to provide financial information that could help you make decision on which college to go to and/or which major to pursue, "
              "in another terms, whether your decision is worth it in terms of financial investment.")
-    st.subheader("How to use UNIROI?")
-    st.write("Two main uses of UNIROI are:" )
-    st.write("- Searching for colleges/majors for finances information, which can be further explored by clicking 'University/Major Search' on the navigation bar.")
-    st.write("- Calculate the total time and money for repaying loan debt, which can be further explored by clicking 'Loan Repayment Calculator' on the navigation bar.")
-    
-    image = Image.open('college-roi.png')
-    st.image(image)
+    st.write("-------------------------------------------------------------------------------------------------------")
     
     st.subheader("What is the motivation behind UNIROI?")
     st.write("When it comes to pursuing a college degree, many prospective students don’t know exactly where to start."
@@ -56,6 +50,13 @@ if navi == "UNIROI Home Page":
              "We want to build a website that provides prospective college students an understanding of the finance "
              "factor when it comes to getting a college degree, especially for helping first generation college students "
              "and underrepresented minorities who don’t have much resources around them.")
+    st.write("-------------------------------------------------------------------------------------------------------")
+
+    st.subheader("How to use UNIROI?")
+    st.write("Two main uses of UNIROI are:" )
+    st.write("- Searching for colleges/majors for finances information, which can be further explored by clicking 'University/Major Search' on the navigation bar.")
+    st.write("- Calculate the total time and money for repaying loan debt, which can be further explored by clicking 'Loan Repayment Calculator' on the navigation bar.")
+    st.write("-------------------------------------------------------------------------------------------------------")
 
     st.write("This webpage platform were built by Duyen Nguyen, Kaiyin Chan and Jieni Yan.")
 
