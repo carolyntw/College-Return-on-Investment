@@ -296,7 +296,7 @@ if navi == "Loan Repayment Calculator":
     with open('choice.txt', 'w') as f:
         f.write('None')
     st.header('Loan Repayment Calculator')
-    st.write("Finding out approximately how much time and money for loan debt repaynment can be challenging, but we are here to help!")
+    st.write("Finding out approximately how much time and money for loan debt repayment can be challenging, but we are here to help!")
     st.write("Input your information and we will help you "
             "calculate how much time it would take for you to pay off your loan debt as well as the total money including interest you would pay over the time!")
     total_loan = st.number_input('The amount of loan taken: ')
