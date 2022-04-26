@@ -8,7 +8,7 @@
 ## 3.Link of the website
 - [College Return on Investment](https://share.streamlit.io/jieni-yan/college-return-on-investment/main)
 
-## 4. Team member
+## 4. Team members
 - Duyen Nguyen
 - Jieni Yan
 - Kaiyin Chan
