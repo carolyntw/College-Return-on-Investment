@@ -17,24 +17,28 @@ key_dict = json.loads(st.secrets["textkey"])
 creds = service_account.Credentials.from_service_account_info(key_dict)
 db = firestore.Client(credentials=creds, project="college-return-on-investment")
 
-file_dict = {"degrees-that-pay-back.json": "Undergraduate Major", "salaries-by-college-type.json": "School Name",
+file_dict = {"Portfolio-by-Location-by-Age.json": "Location", "Portfolio-by-Location-by-Debt-Size.json": "Location",
+            "salaries-by-region.json": "School Name", "student-loan-by-state.json":"state/area",
+             "salaries-by-college-type.json": "School Name", "degrees-that-pay-back.json": "Undergraduate Major",
             "salary_potential.json": "name", "tuition_cost.json":"name"}
+# file_dict = {"student-loan-by-state.json": "state/area"}
 
+# file_dict = {}
 for filename in os.listdir('data'):
     if filename.endswith('.json'):
         collectionName = filename.split('.')[0] # filename minus ext will be used as collection name
-        f = open('data/' + filename, 'r')
+        str = 'data/' + filename
+        f = open(str, 'r', encoding='utf-8-sig')
         docs = json.loads(f.read())
         for doc in docs:
             id = doc.pop(file_dict[filename], None)
             id = id.replace("/", "-")
-            st.write(id)
             if id:
                 db.collection(collectionName).document(id).set(doc, merge=True)
             else:
                 db.collection(collectionName).add(doc)
             # st.write("done" + id)
 
-        st.write("done"+filename)
+        st.write("Done! "+filename)
 
-st.write("done")
+st.write("DONE!")

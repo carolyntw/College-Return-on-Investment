@@ -55,7 +55,7 @@
   },
   {
     "rank": "7",
-    "name": "Birmingham Southern College",
+    "name": "Birmingham-Southern College",
     "state_name": "Alabama",
     "early_career_pay": "49100",
     "mid_career_pay": "88300",
@@ -82,7 +82,7 @@
   },
   {
     "rank": "10",
-    "name": "Alabama A&M University",
+    "name": "Alabama Agricultural and Mechanical University",
     "state_name": "Alabama",
     "early_career_pay": "48700",
     "mid_career_pay": "83500",
@@ -253,7 +253,7 @@
   },
   {
     "rank": "1",
-    "name": "Embry-Riddle Aeronautical University-Prescott",
+    "name": "Embry-Riddle Aeronautical University: Prescott Campus",
     "state_name": "Arizona",
     "early_career_pay": "65600",
     "mid_career_pay": "117900",
@@ -271,7 +271,7 @@
   },
   {
     "rank": "3",
-    "name": "Arizona State University-Tempe",
+    "name": "Arizona State University",
     "state_name": "Arizona",
     "early_career_pay": "54500",
     "mid_career_pay": "100900",
@@ -361,7 +361,7 @@
   },
   {
     "rank": "6",
-    "name": "Arkansas State University-Main Campus",
+    "name": "Arkansas State University",
     "state_name": "Arkansas",
     "early_career_pay": "44600",
     "mid_career_pay": "81400",
@@ -388,7 +388,7 @@
   },
   {
     "rank": "9",
-    "name": "Southern Arkansas University Main Campus",
+    "name": "Southern Arkansas University",
     "state_name": "Arkansas",
     "early_career_pay": "42800",
     "mid_career_pay": "80100",
@@ -451,7 +451,7 @@
   },
   {
     "rank": "16",
-    "name": "University of Arkansas-Fort Smith",
+    "name": "University of Arkansas at Fort Smith",
     "state_name": "Arkansas",
     "early_career_pay": "40700",
     "mid_career_pay": "71100",
@@ -496,7 +496,7 @@
   },
   {
     "rank": "2",
-    "name": "Samuel Merritt University",
+    "name": "Merritt College",
     "state_name": "California",
     "early_career_pay": "91200",
     "mid_career_pay": "154100",
@@ -505,7 +505,7 @@
   },
   {
     "rank": "3",
-    "name": "California Institute of Technology",
+    "name": "Southern California Institute of Technology",
     "state_name": "California",
     "early_career_pay": "84100",
     "mid_career_pay": "151600",
@@ -541,7 +541,7 @@
   },
   {
     "rank": "7",
-    "name": "University of California-Berkeley",
+    "name": "University of California: Berkeley",
     "state_name": "California",
     "early_career_pay": "70700",
     "mid_career_pay": "131800",
@@ -550,7 +550,7 @@
   },
   {
     "rank": "8",
-    "name": "California State University Maritime Academy",
+    "name": "California Maritime Academy",
     "state_name": "California",
     "early_career_pay": "70500",
     "mid_career_pay": "129600",
@@ -568,7 +568,7 @@
   },
   {
     "rank": "10",
-    "name": "University of California-San Diego",
+    "name": "University of California: San Diego",
     "state_name": "California",
     "early_career_pay": "63400",
     "mid_career_pay": "123700",
@@ -586,7 +586,7 @@
   },
   {
     "rank": "12",
-    "name": "California Polytechnic State University-San Luis Obispo",
+    "name": "California Polytechnic State University: San Luis Obispo",
     "state_name": "California",
     "early_career_pay": "65600",
     "mid_career_pay": "119500",
@@ -604,7 +604,7 @@
   },
   {
     "rank": "14",
-    "name": "University of California-Santa Barbara",
+    "name": "University of California: Santa Barbara",
     "state_name": "California",
     "early_career_pay": "59700",
     "mid_career_pay": "116300",
@@ -613,7 +613,7 @@
   },
   {
     "rank": "15",
-    "name": "University of California-Los Angeles",
+    "name": "University of California: Los Angeles",
     "state_name": "California",
     "early_career_pay": "62000",
     "mid_career_pay": "116100",
@@ -622,7 +622,7 @@
   },
   {
     "rank": "16",
-    "name": "University of California-Irvine",
+    "name": "University of California: Irvine",
     "state_name": "California",
     "early_career_pay": "59600",
     "mid_career_pay": "116000",
@@ -649,7 +649,7 @@
   },
   {
     "rank": "19",
-    "name": "University of California-Davis",
+    "name": "University of California: Davis",
     "state_name": "California",
     "early_career_pay": "61500",
     "mid_career_pay": "112600",
@@ -667,7 +667,7 @@
   },
   {
     "rank": "21",
-    "name": "California State Polytechnic University-Pomona",
+    "name": "California State Polytechnic University: Pomona",
     "state_name": "California",
     "early_career_pay": "57700",
     "mid_career_pay": "110800",
@@ -694,7 +694,7 @@
   },
   {
     "rank": "24",
-    "name": "Golden Gate University-San Francisco",
+    "name": "Golden Gate University",
     "state_name": "California",
     "early_career_pay": "59200",
     "mid_career_pay": "109800",
@@ -757,7 +757,7 @@
   },
   {
     "rank": "6",
-    "name": "Colorado State University-Fort Collins",
+    "name": "Colorado State University",
     "state_name": "Colorado",
     "early_career_pay": "53500",
     "mid_career_pay": "96100",
@@ -793,7 +793,7 @@
   },
   {
     "rank": "10",
-    "name": "Colorado State University-Pueblo",
+    "name": "Colorado State University: Pueblo",
     "state_name": "Colorado",
     "early_career_pay": "48100",
     "mid_career_pay": "87600",
@@ -865,7 +865,7 @@
   },
   {
     "rank": "18",
-    "name": "Johnson & Wales University-Denver",
+    "name": "Johnson & Wales University: Denver",
     "state_name": "Colorado",
     "early_career_pay": "41500",
     "mid_career_pay": "74800",
@@ -1018,7 +1018,7 @@
   },
   {
     "rank": "16",
-    "name": "St Vincent's College",
+    "name": "St. Vincent's College",
     "state_name": "Connecticut",
     "early_career_pay": "46800",
     "mid_career_pay": "87900",
@@ -1108,7 +1108,7 @@
   },
   {
     "rank": "1",
-    "name": "Embry-Riddle Aeronautical University-Daytona Beach",
+    "name": "Embry-Riddle Aeronautical University: Daytona Beach",
     "state_name": "Florida",
     "early_career_pay": "63300",
     "mid_career_pay": "111200",
@@ -1162,7 +1162,7 @@
   },
   {
     "rank": "7",
-    "name": "Embry-Riddle Aeronautical University-Worldwide",
+    "name": "Embry-Riddle Aeronautical University: Worldwide Campus",
     "state_name": "Florida",
     "early_career_pay": "55800",
     "mid_career_pay": "96800",
@@ -1180,7 +1180,7 @@
   },
   {
     "rank": "9",
-    "name": "The University of Tampa",
+    "name": "University of Tampa",
     "state_name": "Florida",
     "early_career_pay": "49200",
     "mid_career_pay": "91500",
@@ -1189,7 +1189,7 @@
   },
   {
     "rank": "10",
-    "name": "University of South Florida-Main Campus",
+    "name": "University of South Florida",
     "state_name": "Florida",
     "early_career_pay": "49700",
     "mid_career_pay": "91300",
@@ -1306,7 +1306,7 @@
   },
   {
     "rank": "23",
-    "name": "St Thomas University",
+    "name": "Saint Thomas University",
     "state_name": "Florida",
     "early_career_pay": "47400",
     "mid_career_pay": "84500",
@@ -1333,7 +1333,7 @@
   },
   {
     "rank": "1",
-    "name": "Georgia Institute of Technology-Main Campus",
+    "name": "Georgia Institute of Technology",
     "state_name": "Georgia",
     "early_career_pay": "72700",
     "mid_career_pay": "133400",
@@ -1477,7 +1477,7 @@
   },
   {
     "rank": "17",
-    "name": "Clayton  State University",
+    "name": "Clayton State University",
     "state_name": "Georgia",
     "early_career_pay": "46400",
     "mid_career_pay": "81200",
@@ -1504,7 +1504,7 @@
   },
   {
     "rank": "20",
-    "name": "Georgia College & State University",
+    "name": "Georgia College and State University",
     "state_name": "Georgia",
     "early_career_pay": "45300",
     "mid_career_pay": "80300",
@@ -1603,7 +1603,7 @@
   },
   {
     "rank": "6",
-    "name": "University of Hawaii-West Oahu",
+    "name": "University of Hawaii: West Oahu",
     "state_name": "Hawaii",
     "early_career_pay": "41300",
     "mid_career_pay": "74300",
@@ -1648,7 +1648,7 @@
   },
   {
     "rank": "5",
-    "name": "The College of Idaho",
+    "name": "University of Idaho",
     "state_name": "Idaho",
     "early_career_pay": "44700",
     "mid_career_pay": "82100",
@@ -1756,7 +1756,7 @@
   },
   {
     "rank": "10",
-    "name": "St. John's College-Department of Nursing",
+    "name": "St. John's College",
     "state_name": "Illinois",
     "early_career_pay": "55100",
     "mid_career_pay": "100000",
@@ -1765,7 +1765,7 @@
   },
   {
     "rank": "11",
-    "name": "Wheaton College (Illinois)",
+    "name": "Wheaton College",
     "state_name": "Illinois",
     "early_career_pay": "53700",
     "mid_career_pay": "99700",
@@ -1855,7 +1855,7 @@
   },
   {
     "rank": "21",
-    "name": "Southern Illinois University-Carbondale",
+    "name": "Southern Illinois University Carbondale",
     "state_name": "Illinois",
     "early_career_pay": "49700",
     "mid_career_pay": "90900",
@@ -1882,7 +1882,7 @@
   },
   {
     "rank": "24",
-    "name": "Southern Illinois University-Edwardsville",
+    "name": "Southern Illinois University Edwardsville",
     "state_name": "Illinois",
     "early_career_pay": "51400",
     "mid_career_pay": "90100",
@@ -1927,7 +1927,7 @@
   },
   {
     "rank": "4",
-    "name": "Purdue University-Main Campus",
+    "name": "Purdue University",
     "state_name": "Indiana",
     "early_career_pay": "60900",
     "mid_career_pay": "110000",
@@ -1936,7 +1936,7 @@
   },
   {
     "rank": "5",
-    "name": "DePauw University",
+    "name": "DePaul University",
     "state_name": "Indiana",
     "early_career_pay": "56600",
     "mid_career_pay": "101000",
@@ -1972,7 +1972,7 @@
   },
   {
     "rank": "9",
-    "name": "Indiana University-Bloomington",
+    "name": "Indiana University Bloomington",
     "state_name": "Indiana",
     "early_career_pay": "53600",
     "mid_career_pay": "97100",
@@ -2017,7 +2017,7 @@
   },
   {
     "rank": "14",
-    "name": "Indiana University-Purdue University-Indianapolis",
+    "name": "Indiana University-Purdue University Indianapolis",
     "state_name": "Indiana",
     "early_career_pay": "50500",
     "mid_career_pay": "88200",
@@ -2098,7 +2098,7 @@
   },
   {
     "rank": "22",
-    "name": "University of Saint Francis-Fort Wayne",
+    "name": "University of Saint Francis",
     "state_name": "Indiana",
     "early_career_pay": "45700",
     "mid_career_pay": "83700",
@@ -2107,7 +2107,7 @@
   },
   {
     "rank": "24",
-    "name": "Indiana University-Purdue University-Fort Wayne",
+    "name": "Indiana University-Purdue University Fort Wayne",
     "state_name": "Indiana",
     "early_career_pay": "47300",
     "mid_career_pay": "83200",
@@ -2116,7 +2116,7 @@
   },
   {
     "rank": "25",
-    "name": "Marian University (Indiana)",
+    "name": "Marian University",
     "state_name": "Indiana",
     "early_career_pay": "48400",
     "mid_career_pay": "82000",
@@ -2206,7 +2206,7 @@
   },
   {
     "rank": "10",
-    "name": "Graceland University-Lamoni",
+    "name": "Graceland University",
     "state_name": "Iowa",
     "early_career_pay": "48300",
     "mid_career_pay": "88700",
@@ -2377,7 +2377,7 @@
   },
   {
     "rank": "4",
-    "name": "Ottawa University-Ottawa",
+    "name": "Ottawa University",
     "state_name": "Kansas",
     "early_career_pay": "49800",
     "mid_career_pay": "89900",
@@ -2539,7 +2539,7 @@
   },
   {
     "rank": "22",
-    "name": "Bethel College-North Newton",
+    "name": "Bethel College",
     "state_name": "Kansas",
     "early_career_pay": "42700",
     "mid_career_pay": "73800",
@@ -2548,7 +2548,7 @@
   },
   {
     "rank": "23",
-    "name": "Bethany College (Kansas)",
+    "name": "Bethany College",
     "state_name": "Kansas",
     "early_career_pay": "39100",
     "mid_career_pay": "73200",
@@ -2701,7 +2701,7 @@
   },
   {
     "rank": "15",
-    "name": "Union College (Kentucky)",
+    "name": "Union College",
     "state_name": "Kentucky",
     "early_career_pay": "40400",
     "mid_career_pay": "76000",
@@ -2809,7 +2809,7 @@
   },
   {
     "rank": "2",
-    "name": "Louisiana State University and Agricultural & Mechanical College",
+    "name": "Louisiana State University and Agricultural and Mechanical College",
     "state_name": "Louisiana",
     "early_career_pay": "54800",
     "mid_career_pay": "102900",
@@ -2827,7 +2827,7 @@
   },
   {
     "rank": "4",
-    "name": "Louisiana State University Health Sciences Center-New Orleans",
+    "name": "Louisiana State University Health Sciences Center New Orleans",
     "state_name": "Louisiana",
     "early_career_pay": "52300",
     "mid_career_pay": "94200",
@@ -2935,7 +2935,7 @@
   },
   {
     "rank": "16",
-    "name": "Southern University and A&M College",
+    "name": "Southern University and Agricultural and Mechanical College",
     "state_name": "Louisiana",
     "early_career_pay": "48000",
     "mid_career_pay": "83100",
@@ -2953,7 +2953,7 @@
   },
   {
     "rank": "17",
-    "name": "Louisiana State University-Shreveport",
+    "name": "Louisiana State University in Shreveport",
     "state_name": "Louisiana",
     "early_career_pay": "44500",
     "mid_career_pay": "79800",
@@ -3187,7 +3187,7 @@
   },
   {
     "rank": "4",
-    "name": "University of Maryland-College Park",
+    "name": "University of Maryland: College Park",
     "state_name": "Maryland",
     "early_career_pay": "61300",
     "mid_career_pay": "113400",
@@ -3205,7 +3205,7 @@
   },
   {
     "rank": "6",
-    "name": "University of Maryland-Baltimore County",
+    "name": "University of Maryland: Baltimore County",
     "state_name": "Maryland",
     "early_career_pay": "58100",
     "mid_career_pay": "103600",
@@ -3223,7 +3223,7 @@
   },
   {
     "rank": "8",
-    "name": "University of Maryland, Baltimore",
+    "name": "University of Maryland: Baltimore",
     "state_name": "Maryland",
     "early_career_pay": "57300",
     "mid_career_pay": "99600",
@@ -3250,7 +3250,7 @@
   },
   {
     "rank": "11",
-    "name": "St Mary's College of Maryland",
+    "name": "St. Mary's College of Maryland",
     "state_name": "Maryland",
     "early_career_pay": "53300",
     "mid_career_pay": "95400",
@@ -3349,7 +3349,7 @@
   },
   {
     "rank": "22",
-    "name": "University of Maryland Eastern Shore",
+    "name": "University of Maryland: Eastern Shore",
     "state_name": "Maryland",
     "early_career_pay": "48300",
     "mid_career_pay": "86700",
@@ -3529,7 +3529,7 @@
   },
   {
     "rank": "17",
-    "name": "University of Massachusetts-Lowell",
+    "name": "University of Massachusetts Lowell",
     "state_name": "Massachusetts",
     "early_career_pay": "58800",
     "mid_career_pay": "109300",
@@ -3565,7 +3565,7 @@
   },
   {
     "rank": "20",
-    "name": "University of Massachusetts-Amherst",
+    "name": "University of Massachusetts Amherst",
     "state_name": "Massachusetts",
     "early_career_pay": "57400",
     "mid_career_pay": "103000",
@@ -3601,7 +3601,7 @@
   },
   {
     "rank": "25",
-    "name": "Wheaton College (Massachusetts)",
+    "name": "Wheaton College",
     "state_name": "Massachusetts",
     "early_career_pay": "52600",
     "mid_career_pay": "97500",
@@ -3628,7 +3628,7 @@
   },
   {
     "rank": "3",
-    "name": "University of Michigan-Ann Arbor",
+    "name": "University of Michigan",
     "state_name": "Michigan",
     "early_career_pay": "63500",
     "mid_career_pay": "112200",
@@ -3655,7 +3655,7 @@
   },
   {
     "rank": "6",
-    "name": "University of Michigan-Dearborn",
+    "name": "University of Michigan: Dearborn",
     "state_name": "Michigan",
     "early_career_pay": "55700",
     "mid_career_pay": "99500",
@@ -3853,7 +3853,7 @@
   },
   {
     "rank": "3",
-    "name": "University of St Thomas (Minnesota)",
+    "name": "University of St. Thomas",
     "state_name": "Minnesota",
     "early_career_pay": "57500",
     "mid_career_pay": "106400",
@@ -3862,7 +3862,7 @@
   },
   {
     "rank": "4",
-    "name": "University of Minnesota-Twin Cities",
+    "name": "University of Minnesota: Twin Cities",
     "state_name": "Minnesota",
     "early_career_pay": "57200",
     "mid_career_pay": "104000",
@@ -3907,7 +3907,7 @@
   },
   {
     "rank": "9",
-    "name": "University of Minnesota-Duluth",
+    "name": "University of Minnesota: Duluth",
     "state_name": "Minnesota",
     "early_career_pay": "53200",
     "mid_career_pay": "95700",
@@ -3916,7 +3916,7 @@
   },
   {
     "rank": "10",
-    "name": "Saint Mary's University of Minnesota",
+    "name": "St. Mary's University of Minnesota",
     "state_name": "Minnesota",
     "early_career_pay": "53000",
     "mid_career_pay": "93700",
@@ -3943,7 +3943,7 @@
   },
   {
     "rank": "13",
-    "name": "Minnesota State University-Mankato",
+    "name": "Minnesota State University: Mankato",
     "state_name": "Minnesota",
     "early_career_pay": "51600",
     "mid_career_pay": "90900",
@@ -3970,7 +3970,7 @@
   },
   {
     "rank": "16",
-    "name": "Concordia University-Saint Paul",
+    "name": "Concordia University",
     "state_name": "Minnesota",
     "early_career_pay": "49200",
     "mid_career_pay": "86800",
@@ -3997,7 +3997,7 @@
   },
   {
     "rank": "19",
-    "name": "University of Minnesota-Crookston",
+    "name": "University of Minnesota: Crookston",
     "state_name": "Minnesota",
     "early_career_pay": "49200",
     "mid_career_pay": "86400",
@@ -4015,7 +4015,7 @@
   },
   {
     "rank": "21",
-    "name": "Bethel University (Minnesota)",
+    "name": "Bethel University",
     "state_name": "Minnesota",
     "early_career_pay": "51000",
     "mid_career_pay": "85700",
@@ -4024,7 +4024,7 @@
   },
   {
     "rank": "22",
-    "name": "University of Minnesota-Morris",
+    "name": "University of Minnesota: Morris",
     "state_name": "Minnesota",
     "early_career_pay": "46100",
     "mid_career_pay": "85300",
@@ -4195,7 +4195,7 @@
   },
   {
     "rank": "2",
-    "name": "Washington University in St Louis",
+    "name": "Washington University in St. Louis",
     "state_name": "Missouri",
     "early_career_pay": "64800",
     "mid_career_pay": "114900",
@@ -4204,7 +4204,7 @@
   },
   {
     "rank": "3",
-    "name": "University of Missouri-Columbia",
+    "name": "University of Missouri: Columbia",
     "state_name": "Missouri",
     "early_career_pay": "52300",
     "mid_career_pay": "98600",
@@ -4222,7 +4222,7 @@
   },
   {
     "rank": "5",
-    "name": "Barnes-Jewish College Goldfarb School of Nursing",
+    "name": "Goldfarb School of Nursing at Barnes-Jewish College",
     "state_name": "Missouri",
     "early_career_pay": "55000",
     "mid_career_pay": "95200",
@@ -4249,7 +4249,7 @@
   },
   {
     "rank": "8",
-    "name": "Westminster College (Missouri)",
+    "name": "Westminster College",
     "state_name": "Missouri",
     "early_career_pay": "49400",
     "mid_career_pay": "91600",
@@ -4258,7 +4258,7 @@
   },
   {
     "rank": "9",
-    "name": "University of Missouri-Kansas City",
+    "name": "University of Missouri: Kansas City",
     "state_name": "Missouri",
     "early_career_pay": "50800",
     "mid_career_pay": "89600",
@@ -4267,7 +4267,7 @@
   },
   {
     "rank": "10",
-    "name": "University of Missouri-St Louis",
+    "name": "University of Missouri: St. Louis",
     "state_name": "Missouri",
     "early_career_pay": "48700",
     "mid_career_pay": "87500",
@@ -4276,7 +4276,7 @@
   },
   {
     "rank": "11",
-    "name": "Missouri State University-Springfield",
+    "name": "Missouri State University",
     "state_name": "Missouri",
     "early_career_pay": "45900",
     "mid_career_pay": "86800",
@@ -4474,7 +4474,7 @@
   },
   {
     "rank": "8",
-    "name": "Montana State University-Northern",
+    "name": "Montana State University: Northern",
     "state_name": "Montana",
     "early_career_pay": "43400",
     "mid_career_pay": "75400",
@@ -4483,7 +4483,7 @@
   },
   {
     "rank": "9",
-    "name": "The University of Montana-Western",
+    "name": "The University of Montana: Western",
     "state_name": "Montana",
     "early_career_pay": "35400",
     "mid_career_pay": "63700",
@@ -4492,7 +4492,7 @@
   },
   {
     "rank": "1",
-    "name": "University of Nebraska-Lincoln",
+    "name": "University of Nebraska - Lincoln",
     "state_name": "Nebraska",
     "early_career_pay": "51500",
     "mid_career_pay": "96700",
@@ -4528,7 +4528,7 @@
   },
   {
     "rank": "5",
-    "name": "Nebraska Methodist College of Nursing & Allied Health",
+    "name": "Nebraska Methodist College of Nursing and Allied Health",
     "state_name": "Nebraska",
     "early_career_pay": "51300",
     "mid_career_pay": "89800",
@@ -4546,7 +4546,7 @@
   },
   {
     "rank": "7",
-    "name": "Union College (Nebraska)",
+    "name": "Union College",
     "state_name": "Nebraska",
     "early_career_pay": "49100",
     "mid_career_pay": "87800",
@@ -4564,7 +4564,7 @@
   },
   {
     "rank": "9",
-    "name": "Doane University-Arts & Sciences",
+    "name": "Doane University",
     "state_name": "Nebraska",
     "early_career_pay": "47300",
     "mid_career_pay": "85300",
@@ -4654,7 +4654,7 @@
   },
   {
     "rank": "19",
-    "name": "Concordia University-Nebraska",
+    "name": "Concordia University",
     "state_name": "Nebraska",
     "early_career_pay": "39700",
     "mid_career_pay": "68900",
@@ -4672,7 +4672,7 @@
   },
   {
     "rank": "2",
-    "name": "University of Nevada-Reno",
+    "name": "University of Nevada: Reno",
     "state_name": "Nevada",
     "early_career_pay": "52700",
     "mid_career_pay": "95000",
@@ -4681,7 +4681,7 @@
   },
   {
     "rank": "3",
-    "name": "University of Nevada-Las Vegas",
+    "name": "University of Nevada: Las Vegas",
     "state_name": "Nevada",
     "early_career_pay": "50400",
     "mid_career_pay": "90400",
@@ -4708,7 +4708,7 @@
   },
   {
     "rank": "2",
-    "name": "University of New Hampshire-Main Campus",
+    "name": "University of New Hampshire",
     "state_name": "New-Hampshire",
     "early_career_pay": "54300",
     "mid_career_pay": "100300",
@@ -4834,7 +4834,7 @@
   },
   {
     "rank": "4",
-    "name": "Rutgers University-New Brunswick",
+    "name": "Rutgers University",
     "state_name": "New-Jersey",
     "early_career_pay": "59800",
     "mid_career_pay": "111000",
@@ -4879,16 +4879,7 @@
   },
   {
     "rank": "9",
-    "name": "Fairleigh Dickinson University-Florham Campus",
-    "state_name": "New-Jersey",
-    "early_career_pay": "53700",
-    "mid_career_pay": "98500",
-    "make_world_better_percent": "42",
-    "stem_percent": "6"
-  },
-  {
-    "rank": "9",
-    "name": "Fairleigh Dickinson University-Florham Campus",
+    "name": "Fairleigh Dickinson University: College at Florham",
     "state_name": "New-Jersey",
     "early_career_pay": "53700",
     "mid_career_pay": "98500",
@@ -4969,7 +4960,7 @@
   },
   {
     "rank": "19",
-    "name": "Fairleigh Dickinson University-Metropolitan Campus",
+    "name": "Fairleigh Dickinson University: Metropolitan Campus",
     "state_name": "New-Jersey",
     "early_career_pay": "50800",
     "mid_career_pay": "93000",
@@ -5041,7 +5032,7 @@
   },
   {
     "rank": "2",
-    "name": "New Mexico State University-Main Campus",
+    "name": "New Mexico State University",
     "state_name": "New-Mexico",
     "early_career_pay": "50400",
     "mid_career_pay": "96700",
@@ -5059,7 +5050,7 @@
   },
   {
     "rank": "4",
-    "name": "Eastern New Mexico University-Main Campus",
+    "name": "Eastern New Mexico University",
     "state_name": "New-Mexico",
     "early_career_pay": "44500",
     "mid_career_pay": "80500",
@@ -5203,7 +5194,7 @@
   },
   {
     "rank": "14",
-    "name": "Union College (New York)",
+    "name": "Union College",
     "state_name": "New-York",
     "early_career_pay": "63300",
     "mid_career_pay": "117500",
@@ -5293,7 +5284,7 @@
   },
   {
     "rank": "24",
-    "name": "Pace University-New York",
+    "name": "Pace University",
     "state_name": "New-York",
     "early_career_pay": "59800",
     "mid_career_pay": "107800",
@@ -5365,7 +5356,7 @@
   },
   {
     "rank": "7",
-    "name": "North Carolina A & T State University",
+    "name": "North Carolina Agricultural and Technical State University",
     "state_name": "North-Carolina",
     "early_career_pay": "52600",
     "mid_career_pay": "93400",
@@ -5536,7 +5527,7 @@
   },
   {
     "rank": "1",
-    "name": "North Dakota State University-Main Campus",
+    "name": "North Dakota State University",
     "state_name": "North-Dakota",
     "early_career_pay": "54200",
     "mid_career_pay": "98600",
@@ -5626,7 +5617,7 @@
   },
   {
     "rank": "2",
-    "name": "Miami University-Oxford",
+    "name": "Miami University: Oxford",
     "state_name": "Ohio",
     "early_career_pay": "57200",
     "mid_career_pay": "107300",
@@ -5698,7 +5689,7 @@
   },
   {
     "rank": "10",
-    "name": "Ohio State University-Main Campus",
+    "name": "Ohio State University",
     "state_name": "Ohio",
     "early_career_pay": "55300",
     "mid_career_pay": "98600",
@@ -5716,7 +5707,7 @@
   },
   {
     "rank": "11",
-    "name": "University of Cincinnati-Main Campus",
+    "name": "University of Cincinnati",
     "state_name": "Ohio",
     "early_career_pay": "53600",
     "mid_career_pay": "97300",
@@ -5761,7 +5752,7 @@
   },
   {
     "rank": "17",
-    "name": "Ohio University-Main Campus",
+    "name": "Ohio University",
     "state_name": "Ohio",
     "early_career_pay": "51400",
     "mid_career_pay": "93300",
@@ -5788,7 +5779,7 @@
   },
   {
     "rank": "20",
-    "name": "University of Akron Main Campus",
+    "name": "University of Akron",
     "state_name": "Ohio",
     "early_career_pay": "50700",
     "mid_career_pay": "89200",
@@ -5824,7 +5815,7 @@
   },
   {
     "rank": "24",
-    "name": "Wright State University-Main Campus",
+    "name": "Wright State University",
     "state_name": "Ohio",
     "early_career_pay": "50300",
     "mid_career_pay": "87800",
@@ -5833,7 +5824,7 @@
   },
   {
     "rank": "25",
-    "name": "Bowling Green State University-Main Campus",
+    "name": "Bowling Green State University",
     "state_name": "Ohio",
     "early_career_pay": "47200",
     "mid_career_pay": "87500",
@@ -5851,7 +5842,7 @@
   },
   {
     "rank": "2",
-    "name": "University of Oklahoma-Health Sciences Center",
+    "name": "University of Oklahoma",
     "state_name": "Oklahoma",
     "early_career_pay": "57100",
     "mid_career_pay": "102100",
@@ -5860,7 +5851,7 @@
   },
   {
     "rank": "3",
-    "name": "University of Oklahoma-Norman Campus",
+    "name": "University of Oklahoma",
     "state_name": "Oklahoma",
     "early_career_pay": "54400",
     "mid_career_pay": "100600",
@@ -5869,7 +5860,7 @@
   },
   {
     "rank": "4",
-    "name": "Oklahoma State University-Main Campus",
+    "name": "Oklahoma State University",
     "state_name": "Oklahoma",
     "early_career_pay": "52800",
     "mid_career_pay": "98600",
@@ -6121,7 +6112,7 @@
   },
   {
     "rank": "8",
-    "name": "Linfield College-Online and Continuing Education",
+    "name": "Linfield College",
     "state_name": "Oregon",
     "early_career_pay": "50900",
     "mid_career_pay": "94000",
@@ -6166,7 +6157,7 @@
   },
   {
     "rank": "14",
-    "name": "Concordia University-Portland",
+    "name": "Concordia University",
     "state_name": "Oregon",
     "early_career_pay": "48000",
     "mid_career_pay": "86100",
@@ -6256,7 +6247,7 @@
   },
   {
     "rank": "24",
-    "name": "New Hope Christian College-Eugene",
+    "name": "New Hope Christian College",
     "state_name": "Oregon",
     "early_career_pay": "34200",
     "mid_career_pay": "61600",
@@ -6373,7 +6364,7 @@
   },
   {
     "rank": "13",
-    "name": "Pennsylvania State University-Main Campus",
+    "name": "Penn State University Park",
     "state_name": "Pennsylvania",
     "early_career_pay": "58500",
     "mid_career_pay": "105500",
@@ -6427,7 +6418,7 @@
   },
   {
     "rank": "19",
-    "name": "Pennsylvania State University-Penn State Harrisburg",
+    "name": "Penn State Harrisburg",
     "state_name": "Pennsylvania",
     "early_career_pay": "55000",
     "mid_career_pay": "100400",
@@ -6436,7 +6427,7 @@
   },
   {
     "rank": "19",
-    "name": "University of Pittsburgh-Pittsburgh Campus",
+    "name": "University of Pittsburgh",
     "state_name": "Pennsylvania",
     "early_career_pay": "55900",
     "mid_career_pay": "100400",
@@ -6481,7 +6472,7 @@
   },
   {
     "rank": "25",
-    "name": "Pennsylvania State University-Penn State Erie-Behrend College",
+    "name": "Penn State Erie, The Behrend College",
     "state_name": "Pennsylvania",
     "early_career_pay": "58800",
     "mid_career_pay": "97900",
@@ -6580,7 +6571,7 @@
   },
   {
     "rank": "11",
-    "name": "Johnson & Wales University-Providence",
+    "name": "Johnson & Wales University: Providence",
     "state_name": "Rhode-Island",
     "early_career_pay": "46500",
     "mid_career_pay": "78900",
@@ -6661,7 +6652,7 @@
   },
   {
     "rank": "9",
-    "name": "University of South Carolina-Upstate",
+    "name": "University of South Carolina: Upstate",
     "state_name": "South-Carolina",
     "early_career_pay": "46000",
     "mid_career_pay": "81400",
@@ -6742,7 +6733,7 @@
   },
   {
     "rank": "18",
-    "name": "University of South Carolina-Aiken",
+    "name": "University of South Carolina: Aiken",
     "state_name": "South-Carolina",
     "early_career_pay": "41600",
     "mid_career_pay": "75100",
@@ -6778,7 +6769,7 @@
   },
   {
     "rank": "22",
-    "name": "Anderson University (South Carolina)",
+    "name": "Anderson University",
     "state_name": "South-Carolina",
     "early_career_pay": "39900",
     "mid_career_pay": "70100",
@@ -6913,7 +6904,7 @@
   },
   {
     "rank": "2",
-    "name": "Sewanee-The University of the South",
+    "name": "Sewanee: The University of the South",
     "state_name": "Tennessee",
     "early_career_pay": "53700",
     "mid_career_pay": "97800",
@@ -6958,7 +6949,7 @@
   },
   {
     "rank": "6",
-    "name": "The University of Tennessee-Knoxville",
+    "name": "University of Tennessee: Knoxville",
     "state_name": "Tennessee",
     "early_career_pay": "51200",
     "mid_career_pay": "95100",
@@ -7012,7 +7003,7 @@
   },
   {
     "rank": "13",
-    "name": "The University of Tennessee-Chattanooga",
+    "name": "University of Tennessee: Chattanooga",
     "state_name": "Tennessee",
     "early_career_pay": "46000",
     "mid_career_pay": "82300",
@@ -7057,7 +7048,7 @@
   },
   {
     "rank": "18",
-    "name": "The University of Tennessee-Martin",
+    "name": "University of Tennessee: Martin",
     "state_name": "Tennessee",
     "early_career_pay": "44400",
     "mid_career_pay": "78600",
@@ -7147,7 +7138,7 @@
   },
   {
     "rank": "3",
-    "name": "Texas A&M University-College Station",
+    "name": "Texas A&M University",
     "state_name": "Texas",
     "early_career_pay": "60600",
     "mid_career_pay": "115700",
@@ -7300,7 +7291,7 @@
   },
   {
     "rank": "20",
-    "name": "Texas A&M University-Kingsville",
+    "name": "Texas A&M University: Kingsville",
     "state_name": "Texas",
     "early_career_pay": "53100",
     "mid_career_pay": "97500",
@@ -7354,7 +7345,7 @@
   },
   {
     "rank": "1",
-    "name": "Brigham Young University-Provo",
+    "name": "Brigham Young University",
     "state_name": "Utah",
     "early_career_pay": "59200",
     "mid_career_pay": "108000",
@@ -7390,7 +7381,7 @@
   },
   {
     "rank": "5",
-    "name": "Westminster College (Utah)",
+    "name": "Westminster College",
     "state_name": "Utah",
     "early_career_pay": "51700",
     "mid_career_pay": "92200",
@@ -7588,7 +7579,7 @@
   },
   {
     "rank": "3",
-    "name": "University of Virginia-Main Campus",
+    "name": "University of Virginia",
     "state_name": "Virginia",
     "early_career_pay": "64500",
     "mid_career_pay": "117500",
@@ -7768,7 +7759,7 @@
   },
   {
     "rank": "23",
-    "name": "The University of Virginia's College at Wise",
+    "name": "University of Virginia's College at Wise",
     "state_name": "Virginia",
     "early_career_pay": "46500",
     "mid_career_pay": "82600",
@@ -7804,7 +7795,7 @@
   },
   {
     "rank": "2",
-    "name": "University of Washington-Seattle Campus",
+    "name": "University of Washington Seattle",
     "state_name": "Washington",
     "early_career_pay": "61900",
     "mid_career_pay": "112300",
@@ -7813,7 +7804,7 @@
   },
   {
     "rank": "3",
-    "name": "University of Washington-Bothell Campus",
+    "name": "University of Washington Bothell",
     "state_name": "Washington",
     "early_career_pay": "60200",
     "mid_career_pay": "108000",
@@ -7894,7 +7885,7 @@
   },
   {
     "rank": "12",
-    "name": "University of Washington-Tacoma Campus",
+    "name": "University of Washington Tacoma",
     "state_name": "Washington",
     "early_career_pay": "56000",
     "mid_career_pay": "96800",
@@ -7957,7 +7948,7 @@
   },
   {
     "rank": "19",
-    "name": "Whitworth University-Adult Degree Programs",
+    "name": "Whitworth University",
     "state_name": "Washington",
     "early_career_pay": "50100",
     "mid_career_pay": "88100",
@@ -8065,7 +8056,7 @@
   },
   {
     "rank": "6",
-    "name": "Bethany College (West Virginia)",
+    "name": "Bethany College",
     "state_name": "West-Virginia",
     "early_career_pay": "46000",
     "mid_career_pay": "84900",
@@ -8110,7 +8101,7 @@
   },
   {
     "rank": "11",
-    "name": "Davis & Elkins College",
+    "name": "Davis and Elkins College",
     "state_name": "West-Virginia",
     "early_career_pay": "41100",
     "mid_career_pay": "76500",
@@ -8245,7 +8236,7 @@
   },
   {
     "rank": "8",
-    "name": "Marian University (Wisconsin)",
+    "name": "Marian University",
     "state_name": "Wisconsin",
     "early_career_pay": "46500",
     "mid_career_pay": "90800",
