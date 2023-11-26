@@ -1,5 +1,8 @@
 # College Return on Investment
 
+## Project link
+[View College Return on Investment](https://jieni-yan-college-return-on-investment-streamlit-app-3d425u.streamlit.app/)
+
 ## Project goal
 Building a tool to determine the financial worth of pursuing a specific major from a given college.
 
